@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Component/Navbar/Navbar";
 import Movies from './Component/Movies';
 import NotFound from "./Notfound/NotFound";
 import './App.css';
@@ -8,6 +9,7 @@ import { Route, Switch } from 'react-router-dom'; //componente que me deja escri
 function App() {
   return (
     <React.Fragment>
+      <Navbar />
       <h1>Movies</h1>
       <main>
         <Switch>
