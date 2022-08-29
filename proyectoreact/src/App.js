@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 import Movies from './Component/Movies';
+import NotFound from "./Notfound/NotFound";
+import './App.css';
+
+import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <h1>Movies</h1>
+      <main>
+        <Switch>
+        <Route path='/movies' exact={true} component={Movies} />
+          <Route path='' component={NotFound} />
+        </Switch>
+
+      </main>
+    </React.Fragment>
   );
 }
 

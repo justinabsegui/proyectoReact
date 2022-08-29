@@ -31,6 +31,7 @@ class Movies extends Component {
             }))
             .catch()
     }
+   
 }
 
 export default Movies;
