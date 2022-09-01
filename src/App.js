@@ -15,8 +15,9 @@ function App() {
           <Route path='/movies' exact={true} component={Movies} />
           <Route path='' component={NotFound} />
         </Switch>
-
       </main>
+
+      <Movies/>
 
     </React.Fragment>
   );

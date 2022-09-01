@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-//importar css
+import React, {Component} from "react";
+import MovieCard from "../MovieCard/MovieCard";
+
 
 class Movies extends Component {
-    constructor() {
-        super()
-        this.state = {
-            movies: [], //aparecer peliculas
-            nextUrl: ''
+    constructor(props){
+        super(props);
+        this.state ={
+            data:[]
         }
     }
 
-    componentDidMount() {
-        //BUscamos datos
-        fetch('https://api.themoviedb.org/3/movie/550?api_key=ff0d15573865ddc49a8a0b0024148010')
-            .then(res => res.json())
-            .then(data => this.setState({
-                movies: data.results,
-                nextUrl: data.info.next
-            }))
-            .catch()
+    componentDidMount( ){
+        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+        .then(response =>response.json())
+        .then(data => this.setState(
+            {data: data.results}
+        ))
+        .catch(error => console.log('el error fue '+ error ))
     }
 
-    traerMas() {
-        //Traer la siguiente página de movies
-        fetch(this.state.nextUrl)
-            .then(res => res.json())
-            .then(data => this.setState({
-                movies: data.results.concat(this.state.movies),
-                nextUrl: data.info.next
-            }))
-            .catch()
+    render(){
+        return(
+            <React.Fragment> 
+                <div>
+                    <h2 className="TituloC">Movies</h2>
+                </div>
+                <section className='card-container'>
+                    {this.state.data.map((unMovies, idx )=> <MovieCard key={unMovies + idx} data={unMovies}  image={unMovies.poster_path} title={unMovies.title}/>)}
+                </section>
+            </React.Fragment>
+        )
+            
     }
-   
-}
+    }
 
-export default Movies;
+ export default Movies;
