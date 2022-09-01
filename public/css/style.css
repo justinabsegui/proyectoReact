@@ -1,0 +1,781 @@
+/*Selector Universal*/
+*{
+    box-sizing: border-box;
+}
+
+
+/*Generales*/
+li{
+    list-style: none;
+}
+body{
+    background-image: linear-gradient(#6c6cff, #6b3636);
+}
+
+h4, h5, h1 {
+    font-family:'Josefin Sans', sans-serif;
+}
+
+/*Header*/
+header{
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+form{ 
+    align-items: flex-start;
+}
+.header, a{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+input, button{
+    font-family: 'Josefin Sans', sans-serif;
+    align-self: center;
+    margin: 1px;
+    margin-top: 12px;
+    padding: 9px;
+    border: 0px white solid;
+    border-radius: 50px;
+}
+button{
+    color: black;
+    padding: 5px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0%;
+}
+.logo{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.pre{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    background-color: none;
+    margin: 10px;
+    letter-spacing: 3px;
+    text-align: right;
+}
+.alerta{
+    color:rgb(136, 20, 20);
+    font-size: 18px;
+}
+.closeIcon{
+    display: none;
+    color: rgb(136, 20, 20);
+}
+
+
+/*Footer*/
+footer{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    margin: 16px;
+    padding-top: 80px;
+    color: white;
+    word-spacing: 2px;
+}
+.foot{
+    color:white;
+    text-decoration: none;
+    margin-left: 1%;
+}
+i{
+    margin: 4px;
+}
+
+/* GIF LOADER*/
+.gif {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+    height: 100vh;
+}
+.gif img {
+    margin:25% ;
+}
+
+
+/*Home*/
+.prese {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 90px;
+    letter-spacing: 10px;
+}
+.presen{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    padding: 0px;
+    line-height: 3px;
+    margin: 5%;
+    letter-spacing: 5px;    
+}
+.pres{
+    text-align: center;
+}
+h3 {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+.title_home {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 1%;
+}
+.track_home_conteiner {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+}
+.track_home {
+    width: 18%;
+    padding: 2%; 
+}
+.track_home img { 
+    border-radius: 5%;
+    width: 100%;
+}
+.track_home h5 a, .nombreDelArtista{
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 15px;
+}
+.album_track_home_conteiner {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.album_track_home {
+    width: 18%;
+    padding: 2%; 
+}
+.album_track_home img {
+    border-radius: 5%;
+    width: 100%;
+}
+.album_track_home  h5 a{
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 15px;
+}
+.contenedor_artistas_home {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;  
+}
+.artistas_home {
+    width: 18%;
+    text-align: center; 
+    padding: 2%; 
+}
+.artistas_home img {
+    width: 100%;
+    border-radius: 50%;
+}
+.arriba-conteiner {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 6%;
+    margin-top: 6%;
+
+}
+.arriba{
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+.arriba a {
+    color: rgb(70, 67, 67);
+    font-size: 25px;
+   
+}
+
+
+/*Detail.track*/
+.track{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin:0px;
+}
+.img{
+    padding: 9px;
+}
+.sey{
+    padding: 15px;
+    margin-left: 5%;
+}
+.halsey, .hal, .si2, .nombre, .genero, .fecha{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 22px;
+}
+.nombre, .genero, .fecha, .halsey{
+    font-size: 40px;
+}
+.hal{
+    font-size: 30px;
+}
+.si2{
+    padding: 12px;
+    background-color: black ;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+    text-align: center;
+}
+.detalle{
+    border-radius: 100%;
+}
+
+/*Detail.artist*/
+.artist{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin:0px;
+}
+.imgartist{
+    padding:9px ;
+    margin-left: 5%;
+    margin-right: 5% ;
+}
+.contenido{
+    padding: 15px;
+}
+.she{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 90px;
+    letter-spacing: 7px;
+    margin: 30px;
+}
+.she2, .top,.she3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 22px;
+    margin-left: 5%;
+}
+.she2{
+    font-size: 40px;
+}
+.top{
+    margin: 6px;
+    font-size: 35px;
+    margin: 2%;
+}
+.titulo{
+    color: white;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 1%;
+    font-size: 60px;
+}
+
+
+/*Detail album*/
+.info{
+    padding: 15px;
+}
+.lista1{
+    margin: 6px
+}
+
+
+
+/*Detail Genres*/
+.genres-detail-titulo {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 80px;
+    padding: 30px;
+}
+
+
+/*Página géneros*/
+.contenedor_generos{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.genres {
+    width: 23%;
+    text-align: center;
+    margin-top: 25px;
+    padding: 3%;
+}
+.genres img {
+    border-radius: 5%;
+    width: 100%;
+}
+.genres h4 {  
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+.genres_titulo1 {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 65px;
+    padding: 20px;
+}
+
+
+/*Página playlist*/
+.titulo-playlist{
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 100px;
+    padding: 30px;
+}
+.music-name {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align:start;
+}
+
+
+/*Search Results*/
+.result-titulo{
+    color: white;
+    text-align: left;
+    margin: 1%;
+    font-size: 60px;
+    margin-bottom: 3%;
+}
+.result-relacionados{
+    margin: 3%;
+    font-size: 40px;
+    margin-top: 7%;
+    text-align: center;
+}
+.result0{
+    margin: 3%;
+    margin-top: 3%;
+    font-size: 20px;
+    color:white;
+}
+.result-subtitulo{
+    font-family:'Josefin Sans', sans-serif;
+    margin-top: 7%;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.leyenda {
+    font-family:'Josefin Sans', sans-serif;
+    color:rgba(255, 255, 255, 0.849);
+    margin: 5%;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+
+
+
+/*Media queries*/
+/*Tablets*/
+@media (max-width: 768px){
+
+    /*Detail Track*/
+    .she{
+        font-size: 45px;
+    }
+    .nombre, .genero, .halsey, .fecha{
+        font-size: 20px;
+        width: 300px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .player{
+        width: 200px;
+    }
+    .hal, .si2{
+        font-size: 15px;
+        padding: 6px;
+        width: 300px;
+    }
+    .track{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        min-height: 540px;
+    }
+    .sey{
+        width: 40%;
+    }
+
+    /*Detail Album*/
+    .artist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+    }
+    .info{
+        width: 40%;
+    }
+    .top{
+        font-size: 17.5px;
+    }
+    .she2{
+        font-size: 20px;
+    }
+
+    /*géneros*/
+    .genres {
+        width: 30%;
+        margin-top: 0;
+        padding: 3%;
+    }
+    .genres h4 a {
+        font-size: 20px;
+    }
+    .genres_titulo1 {
+        font-size: 50px;
+    }
+
+    /*detalle de genero*/
+    .genres-detail-titulo {
+        font-size: 50px;
+    }
+
+    /*menu*/    
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 12px;
+        
+    } 
+    form {
+        margin-top: 2%;
+    }   
+    .menu { 
+        font-size: 15px;
+        margin: 6px;
+    }
+
+    /*home*/
+    .prese {
+        font-size: 50px;
+        padding-top: 15%;
+    }
+    .presen{
+        font-size: 25px;
+       letter-spacing: 0px; 
+    }
+    .pres {
+        margin-block-end: 10%;
+    } 
+    .title_home {
+        font-size: 30px;
+        text-align: center;
+    }   
+    .track_home {
+        width: 30%;
+        text-align: center;
+        padding: 4%;
+    }
+    .track_home h5 a {
+        font-size: 10px;
+        
+    }
+    .track_home h3 a {
+        font-size: 15px;
+        
+    }
+    .album_track_home {
+        width: 30%; 
+        text-align: center;
+        padding: 4%;
+    } 
+    .album_track_home h5 a{
+        font-size: 12.5px;
+    }
+    .album_track_home h3 a {
+        font-size: 15px;
+    }
+
+    .artistas_home  {
+        width: 30%;
+        text-align: center;
+        padding: 4%;
+    }
+    .arriba{
+        width: 30px;
+    }
+    .arriba a {
+        font-size: 20px;
+    }
+
+    /*palylist*/
+
+    .titulo-playlist {
+        font-size: 60px;
+    }
+
+    /*Search Results*/
+    .result-titulo{
+        font-size: 35px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    
+    }
+    .leyenda {
+        font-size: 20px;
+    }
+    .result-subtitulo{
+        font-size: 35px;
+        margin: 3%;
+        margin-top: 15%;
+    }
+    .result0{
+        font-size: 15px;
+    }
+    .result-relacionados{
+        font-size: 25px;
+    }
+    .result-item {
+        width: 35%;
+        justify-content: space-around;
+    }
+    
+}
+
+
+/*Mobile*/
+@media (max-width: 420px){
+
+    /*Detail track*/
+    .song{
+        font-size: 45px ;
+        display: flex;
+    }
+    .eyesclosed{
+        margin-top: 10%;
+        margin-bottom: 5% ;
+    }
+    .img{
+        width: 45%;
+    }
+    .detalle{
+        width: 45%;
+        margin-top: 5%;
+    }
+    .track{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 300px;
+    }
+    .sey{
+        margin-left: 15px;
+    }
+    .hal, .halsey, .si2{
+        font-size: 11px;
+        justify-content: flex-start;
+    }
+    .si2{
+        padding:6px ;
+        font-size: 9px;
+    }
+
+    /*Detail album*/
+    .dom{
+        font-size: 45px ;
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 4%;
+    }
+    .top{
+        font-size: 11px;
+    }
+    .info{
+        width: 100%;
+    }
+
+    /*Detail artist*/
+    .she{
+        font-size: 45px;
+    }
+    .artist{
+        display: flex;
+        margin-top: 5%;
+    }
+    .she2, .top, .she3{
+        font-size: 11px;
+    }
+    .halsi{
+        font-size: 9px;
+        margin-top: 3%;
+        padding: 6px;
+    }
+
+    /*Search Results*/
+    .result-titulo{
+        font-size: 30px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    .leyenda {
+        font-size: 15px;
+    }
+    .result-subtitulo{
+        font-size: 30px;
+        margin: 3%;
+        margin-top: 20%;
+    }
+    .result0{
+        font-size: 10px;
+    }
+    .result-relacionados{
+        font-size: 20px;
+    }
+
+    /*Home*/
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 10px;
+        
+    }
+    .menu { 
+        font-size: 15px;
+        margin: 4px;
+        padding: 0;
+        width: 100%;
+    }
+    form {
+        padding-left: 25%;
+    }
+    .logo {
+        display: none;
+    }
+    .prese {
+        font-size: 40px;
+        padding-top: 15%;
+        margin: 0;
+        letter-spacing: auto;
+        margin-block-end: 20px;
+    }
+    .presen{
+        font-size: 15px;
+        margin: 0;
+        letter-spacing: 0px;
+    }       
+    .pres{
+        text-align: center;
+        padding-left: 5%;
+        padding-block-end: 10%;
+    }
+    .title_home {
+        text-align: center;
+    }
+    .track_home_conteiner{
+        padding: 1%;
+    }   
+    .track_home {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    } 
+    .album_track_home_conteiner {
+        padding: 1%;
+    }
+    .album_track_home {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    } 
+    .contenedor_artistas_home {
+        padding: 1%;
+    }
+    .artistas_home  {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    }
+    .arriba{
+        width: 23px;
+    }
+    .arriba a {
+        font-size: 15px;
+    }
+
+    /*detalle de género*/
+    .genres_titulo {
+        font-size: 60px;
+        margin: 10%;
+        align-items: flex-start;
+        text-align: center;
+        padding-block-end: 20%;
+    }
+
+    /*géneros*/
+    .genres_titulo1{
+        font-size: 30px;
+        margin: 10%;
+        text-align: center;
+    }
+    .contenedor_generos { 
+        padding: 6%;
+    }
+    .genres {
+        width: 45%;
+        text-align: center;
+        margin-top: 0;
+        padding: 2%;
+    }
+    
+    /* footer*/ 
+    footer p {
+        font-size: 6.5px;
+    }
+    footer i {
+        font-size: 6.5px;
+    }
+    .foot {
+        font-size: 6.5px;
+    }
+
+    /*palylist*/
+    .titulo-playlist {
+        font-size: 40px;
+    }
+
+}
