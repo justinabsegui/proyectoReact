@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import SerieCard from "../../SerieCard/SerieCard";
+import SerieCard from "../SerieCard/SerieCard";
 
 
-class LatestSerie extends Component {
+class LatestSeries extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -26,12 +26,13 @@ class LatestSerie extends Component {
                     <h2 className="TituloC">Latest Series</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unLatestSerie, idx )=> <SerieCard key={unLatestSerie + idx} data={unLatestSerie}  image={unLatestSerie.poster_path} title={unLatestSerie.title}/>)}
+                    {this.state.data.map((unLatestSeries, idx )=> <SerieCard key={unLatestSeries + idx} data={unLatestSeries}  image={unLatestSeries.poster_path} title={unLatestSeries.title}/>)}
                 </section>
             </React.Fragment>
         )
+    
             
     }
     }
 
- export default LatestSerie;
+ export default LatestSeries;
