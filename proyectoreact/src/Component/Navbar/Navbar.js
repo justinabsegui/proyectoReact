@@ -7,7 +7,10 @@ function Navbar(){
         <nav>
             <ul className="main-nav">
                 <li>
-                    <Link to='/movies'> Movies </Link>
+                    <Link to='/PopularMovies'> Popular Movies </Link>
+                    <Link to='/LatestMovies'> Latest Movies </Link>
+                    <Link to='/PopularSeries '> Popular Series </Link>
+                    <Link to='/LatestSeries '> Latest Series </Link>
                 </li>
                 <li>
                     <Link to='/movies'> Movies </Link>
