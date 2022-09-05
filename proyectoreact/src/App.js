@@ -3,15 +3,11 @@ import Navbar from "./Component/Navbar/Navbar";
 import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./Component/Home/Home";
-<<<<<<< HEAD
-import TopRatedMovies from "./Component/Movies/Top Rated Movies/TopRatedMovies";
-import LatestMovies from "./Component/Movies/Latest Movies/LatestMovies";
-=======
 import MovieCard from "./Component/Movies/MovieCard/MovieCard";
 import TopRatedMovies from "./Component/Movies/Top Rated Movies/TopRatedMovies";
 import LatestMovies from "./Component/Movies/Latest Movies/LatestMovies";
 import SerieCard from "./Component/Series/SerieCard/SerieCard";
->>>>>>> 05309a965cc97435208aceb18b5ceedf41d85c8b
+
 import PopularSerie from "./Component/Series/Popular Series/PopularSeries";
 import NotFound from "./Component/Notfound/NotFound";
 
