@@ -1,9 +1,12 @@
 import React from "react";
 import Navbar from "./Component/Navbar/Navbar";
+import Header from "./Component/Header/Header";
+import Footer from "./Component/Footer/Footer";
 import Movies from './Component/Movies/Movies';
 import MovieCard from "./Component/MovieCard/MovieCard";
 import Serie from "./Component/Series/Series";
 import NotFound from "./Component/Notfound/NotFound";
+
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
 
 function App() {

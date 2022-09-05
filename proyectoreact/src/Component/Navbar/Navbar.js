@@ -9,6 +9,9 @@ function Navbar(){
                 <li>
                     <Link to='/movies'> Movies </Link>
                 </li>
+                <li>
+                    <Link to='/movies'> Movies </Link>
+                </li>
             </ul>
             <ul className="user">
                 <li>Username <img src="/img/user.jpg" alt=""/></li>
