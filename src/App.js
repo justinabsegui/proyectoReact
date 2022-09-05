@@ -21,7 +21,7 @@ function App() {
       <h1>Movies</h1>
       <main>
         <Switch>
-          <Route path='/' exact={true} component={PopularSerie} />
+          <Route path='/' exact={true} component={Home} />
           <Route path='' component={NotFound} />
         </Switch>
       </main>
