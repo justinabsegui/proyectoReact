@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import SerieCard from "../SerieCard/SerieCard";
 
 
-class Serie extends Component {
+class LatestSerie extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -11,7 +11,7 @@ class Serie extends Component {
     }
 
     componentDidMount( ){
-        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c") //cambiar api
+        fetch("https://api.themoviedb.org/3/tv/latest?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US") //cambiar api
         .then(response =>response.json())
         .then(data => this.setState(
             {data: data.results}
@@ -23,10 +23,10 @@ class Serie extends Component {
         return(
             <React.Fragment> 
                 <div>
-                    <h2 className="TituloC">Serie</h2>
+                    <h2 className="TituloC">Latest Series</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unSerie, idx )=> <SerieCard key={Serie + idx} data={Serie}  image={Serie.poster_path} title={Serie.title}/>)}
+                    {this.state.data.map((unLatestSerie, idx )=> <SerieCard key={unLatestSerie + idx} data={unLatestSerie}  image={unLatestSerie.poster_path} title={unLatestSerie.title}/>)}
                 </section>
             </React.Fragment>
         )
@@ -34,4 +34,4 @@ class Serie extends Component {
     }
     }
 
- export default Serie;
+ export default LatestSerie;
