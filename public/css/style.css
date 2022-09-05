@@ -3,7 +3,9 @@
     box-sizing: border-box;
 }
 
-
+.user{
+    color: #000;
+}
 /*Generales*/
 li{
     list-style: none;
