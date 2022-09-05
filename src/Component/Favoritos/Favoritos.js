@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MovieCard from '../MovieCard/MovieCard';
-import LatestMovies from '/../Latest Movies/LatestMovies';
+import MovieCard from '../Movies/MovieCard/MovieCard';
+import LatestMovies from '../Movies/Latest Movies/LatestMovies';
 
 class Favoritos extends Component {
     constructor() {
