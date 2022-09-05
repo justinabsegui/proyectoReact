@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import MovieCard from "../Component/MovieCard/MovieCard";
+import SerieCard from "../SerieCard/SerieCard";
 
 
-class LatestMovies extends Component {
+class PopularSerie extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -11,7 +11,7 @@ class LatestMovies extends Component {
     }
 
     componentDidMount( ){
-        fetch("https://api.themoviedb.org/3/movie/latest?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US")
+        fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1") //cambiar api
         .then(response =>response.json())
         .then(data => this.setState(
             {data: data.results}
@@ -23,10 +23,10 @@ class LatestMovies extends Component {
         return(
             <React.Fragment> 
                 <div>
-                    <h2 className="TituloC">Latest Movies</h2>
+                    <h2 className="TituloC">Popular Series</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unLatestMovies, idx )=> <MovieCard key={unLatestMovies + idx} data={unLatestMovies}  image={unLatestMovies.poster_path} title={unLatestMovies.title}/>)}
+                    {this.state.data.map((unPopularSerie, idx )=> <SerieCard key={unPopularSerie + idx} data={unPopularSerie}  image={unPopularSerie.poster_path} title={unPopularSerie.title}/>)}
                 </section>
             </React.Fragment>
         )
@@ -34,4 +34,4 @@ class LatestMovies extends Component {
     }
     }
 
- export default LatestMovies;
+ export default PopularSerie;

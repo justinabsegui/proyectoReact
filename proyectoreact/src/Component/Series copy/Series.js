@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import SerieCard from "../SerieCard/SerieCard";
+import SerieCard from "../Series/SerieCard/SerieCard";
 
 
-class Serie extends Component {
+class PopularSerie extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -23,10 +23,10 @@ class Serie extends Component {
         return(
             <React.Fragment> 
                 <div>
-                    <h2 className="TituloC">Serie</h2>
+                    <h2 className="TituloC">Popular Series</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unSerie, idx )=> <SerieCard key={Serie + idx} data={Serie}  image={Serie.poster_path} title={Serie.title}/>)}
+                    {this.state.data.map((unPopularSerie, idx )=> <SerieCard key={PopularSerie + idx} data={PopularSerie}  image={PopularSerie.poster_path} title={PopularSerie.title}/>)}
                 </section>
             </React.Fragment>
         )
@@ -34,4 +34,4 @@ class Serie extends Component {
     }
     }
 
- export default Serie;
+ export default PopularSerie;
