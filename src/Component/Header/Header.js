@@ -4,11 +4,11 @@ import Navbar from "../Navbar/Navbar";
 
 function Header() {
     return (
-        <header>
-           
-        <Buscador/>
-
-        </header>
+        <React.Fragment>
+            <section className="header">
+                <h1>CineReact</h1>
+            </section>
+        </React.Fragment>
     )
 }
 

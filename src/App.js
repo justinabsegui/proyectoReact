@@ -18,22 +18,23 @@ function App() {
     <React.Fragment>
 
       <Navbar />
+      <Header/>
       <h1>Movies</h1>
       <main>
         <Switch>
           <Route path='/' exact={true} component={Home} />
           
-          <Route path='/Favoritos' component={Favoritos} />
+          {/* <Route path='/Favoritos' component={Favoritos} /> */}
 
-          <Route path='/VerTodas' component={VerTodas} />
+          {/* <Route path='/VerTodas' component={VerTodas} /> */}
 
           <Route path='/LatestMovies' component={LatestMovies} />
 
-          <Route path='/Movie/id/:id' component={DetalleMovies} />
+          {/* <Route path='/Movie/id/:id' component={DetalleMovies} /> */}
 
-          <Route path='/LatestSeries' component={LatestSeries} />
+          {/* <Route path='/LatestSeries' component={LatestSeries} /> */}
 
-          <Route path='/Series/id/:id' component={DetalleSeries} />
+          {/* <Route path='/Series/id/:id' component={DetalleSeries} /> */}
 
           <Route path='' component={NotFound} />
         </Switch>
