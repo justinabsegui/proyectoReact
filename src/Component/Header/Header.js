@@ -5,7 +5,7 @@ function Header() {
     return (
         <React.Fragment>
             <section className="header">
-                <h1>CineReact</h1>
+                <h1 className="header">CineReact</h1>
             </section>
         </React.Fragment>
     )

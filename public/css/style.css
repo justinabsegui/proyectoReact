@@ -1,17 +1,20 @@
-/*Selector Universal*/
+/* /Selector Universal/ */
 *{
     box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+   
 }
 
-.user{
-    color: #000;
-}
-/*Generales*/
+/* /Generales/ */
 li{
     list-style: none;
 }
+ul{
+  list-style: none;
+}
 body{
-    background-image: linear-gradient(Blue,yellow);
+  background-image: url(../images/backround-rugosos.JPEG);
 }
 
 h4, h5, h1 {
@@ -22,26 +25,30 @@ h4, h5, h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
-.header{
-    background-color: #000;
-}
-/*Header*/
+/* /Header/ */
 header{
     display: flex;
-    font-family: 'Josefin Sans', sans-serif;
     flex-wrap: wrap;
-    color: #000;
     justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
     width: 100%;
     background-image: url("./Backkground\ Header.jpeg");
-    background-color: #000;
 }
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
 form{ 
     align-items: flex-start;
 }
-.header, a{
+.header,{
     letter-spacing: 2px;
     word-spacing: 2px;
     color: white;
@@ -77,7 +84,6 @@ button{
     word-spacing: 2px;
     color: white;
     text-decoration: none;
-    background-color: none;
     margin: 10px;
     letter-spacing: 3px;
     text-align: right;
@@ -91,7 +97,7 @@ button{
     color: rgb(136, 20, 20);
 }
 
-/*Search*/
+/* /Search/ */
 .search-form {
     /* font-family: 'Akshar', sans-serif; */
     font-family: 'IBM Plex Sans', sans-serif;
@@ -123,7 +129,7 @@ button{
     cursor: pointer;
   }
 
-/*Footer*/
+/* /Footer/ */
 footer{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 13px;
@@ -146,18 +152,12 @@ i{
     display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
     height: 100vh;
 }
 .gif img {
     margin:25% ;
 }
-
-.main-nav{
-    color: #000;
-   background-color: rgb(30, 57, 82);
-}
-/*Home*/
+/* /Home/ */
 .prese {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -257,7 +257,7 @@ h3 {
 }
 
 
-/*Detail.track*/
+/* /Detail.track/ */
 .track{
     display: flex;
     flex-direction: row;
@@ -285,7 +285,6 @@ h3 {
 }
 .si2{
     padding: 12px;
-    background-color: black ;
     color: white;
     font-size: 18px;
     border-radius: 22px;
@@ -295,7 +294,7 @@ h3 {
     border-radius: 100%;
 }
 
-/*Detail.artist*/
+/* /Detail.artist/ */
 .artist{
     flex-direction: row;
     flex-wrap: wrap;
@@ -343,7 +342,7 @@ h3 {
 }
 
 
-/*Detail album*/
+/* /Detail album/ */
 .info{
     padding: 15px;
 }
@@ -353,7 +352,7 @@ h3 {
 
 
 
-/*Detail Genres*/
+/* /Detail Genres/ */
 .genres-detail-titulo {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -364,7 +363,7 @@ h3 {
 }
 
 
-/*Página géneros*/
+/* /Página géneros/ */
 .contenedor_generos{
     display: flex;
     flex-wrap:wrap;
@@ -396,7 +395,7 @@ h3 {
 }
 
 
-/*Página playlist*/
+/* /Página playlist/ */
 .titulo-playlist{
     color: white;
     text-align: center;
@@ -410,8 +409,8 @@ h3 {
     text-align:start;
 }
 
-
-/*Search Results*/
+/* 
+/Search Results/ */
 .result-titulo{
     color: white;
     text-align: left;
@@ -450,11 +449,11 @@ h3 {
 
 
 
-/*Media queries*/
-/*Tablets*/
+/* /Media queries/
+/Tablets/ */
 @media (max-width: 768px){
 
-    /*Detail Track*/
+    /* /Detail Track/ */
     .she{
         font-size: 45px;
     }
@@ -484,7 +483,7 @@ h3 {
         width: 40%;
     }
 
-    /*Detail Album*/
+    /* /Detail Album/ */
     .artist{
         display: flex;
         flex-direction: row;
@@ -501,7 +500,7 @@ h3 {
         font-size: 20px;
     }
 
-    /*géneros*/
+    /* /géneros/ */
     .genres {
         width: 30%;
         margin-top: 0;
@@ -514,12 +513,12 @@ h3 {
         font-size: 50px;
     }
 
-    /*detalle de genero*/
+    /* /detalle de genero/ */
     .genres-detail-titulo {
         font-size: 50px;
     }
 
-    /*menu*/    
+    /* /menu/     */
     form, input, button{
         margin: 0;
         margin-top: 0px;
@@ -535,7 +534,7 @@ h3 {
         margin: 6px;
     }
 
-    /*home*/
+    /* /home/ */
     .prese {
         font-size: 50px;
         padding-top: 15%;
@@ -588,13 +587,13 @@ h3 {
         font-size: 20px;
     }
 
-    /*palylist*/
+    /* /palylist/ */
 
     .titulo-playlist {
         font-size: 60px;
     }
 
-    /*Search Results*/
+    /* /Search Results/ */
     .result-titulo{
         font-size: 35px;
         margin-top: 5%;
@@ -622,11 +621,11 @@ h3 {
     
 }
 
-
-/*Mobile*/
+/* 
+/Mobile/ */
 @media (max-width: 420px){
 
-    /*Detail track*/
+    /* /Detail track/ */
     .song{
         font-size: 45px ;
         display: flex;
@@ -660,7 +659,7 @@ h3 {
         font-size: 9px;
     }
 
-    /*Detail album*/
+    /* /Detail album/ */
     .dom{
         font-size: 45px ;
         display: flex;
@@ -675,7 +674,7 @@ h3 {
         width: 100%;
     }
 
-    /*Detail artist*/
+    /* /Detail artist/ */
     .she{
         font-size: 45px;
     }
@@ -692,7 +691,7 @@ h3 {
         padding: 6px;
     }
 
-    /*Search Results*/
+    /* /Search Results/ */
     .result-titulo{
         font-size: 30px;
         margin-top: 10%;
@@ -713,8 +712,7 @@ h3 {
     .result-relacionados{
         font-size: 20px;
     }
-
-    /*Home*/
+/*  /Home/ */
     form, input, button{
         margin: 0;
         margin-top: 0px;
@@ -785,7 +783,7 @@ h3 {
         font-size: 15px;
     }
 
-    /*detalle de género*/
+    /* /detalle de género/ */
     .genres_titulo {
         font-size: 60px;
         margin: 10%;
@@ -794,7 +792,7 @@ h3 {
         padding-block-end: 20%;
     }
 
-    /*géneros*/
+    /* /géneros/ */
     .genres_titulo1{
         font-size: 30px;
         margin: 10%;
@@ -821,7 +819,7 @@ h3 {
         font-size: 6.5px;
     }
 
-    /*palylist*/
+    /* /palylist/ */
     .titulo-playlist {
         font-size: 40px;
     }
