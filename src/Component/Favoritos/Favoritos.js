@@ -4,8 +4,7 @@ import LatestMovies from '../Movies/Latest Movies/LatestMovies';
 
 class Favoritos extends Component {
     constructor() {
-        super()
-            ;
+        super();
         this.state={
             personajes: []
         }

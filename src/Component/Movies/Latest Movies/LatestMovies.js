@@ -19,14 +19,23 @@ class LatestMovies extends Component {
         .catch(error => console.log('el error fue '+ error ))
     }
 
+    borrar(id){
+        let peliculasFiltradas = this.state.peliculas.filter(unLatestMovies => unLatestMovies.id !== id);
+        this.setState({
+         peliculas: peliculasFiltradas
+        })
+     }
+ 
+
     render(){
         return(
             <React.Fragment> 
+                 <button onClick={()=>this.traerMas()}> Traer más </button>
                 <div>
                     <h2 className="TituloC">Latest Movies</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unLatestMovies, idx )=> <MovieCard key={unLatestMovies + idx} data={unLatestMovies}  image={unLatestMovies.poster_path} title={unLatestMovies.title}/>)}
+                    {this.state.peliculas.map((unLatestMovies, idx )=> <MovieCard key={unLatestMovies + idx} peliculas={unLatestMovies}  image={unLatestMovies.poster_path} title={unLatestMovies.title}/>)}
                 </section>
             </React.Fragment>
         )

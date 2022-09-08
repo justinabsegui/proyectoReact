@@ -10,7 +10,8 @@ class Buscador extends Component {
 
     prevenirRecarga(e) {
         e.preventDefault();
-        // queres traer la info
+          // queres traer la info
+        this.props.buscar();
     }
 
     guardarCambios(e) {
