@@ -10,9 +10,7 @@ function Home(){
 
     return (
         <div>
-            <Header/>
             <PopularSerie />
-            <Footer/>
            {/*  <TopRatedMovies />
             <LatestMovies />
             <LatestSeries />

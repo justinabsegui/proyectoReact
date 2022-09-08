@@ -36,7 +36,17 @@ header{
     font-family: 'Josefin Sans', sans-serif;
     width: 100%;
     background-image: url("./Backkground\ Header.jpeg");
+    margin: 80px;
 }
+
+main-nav{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+}
+
 ul{
   display: flex;
   flex-wrap: wrap;

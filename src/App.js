@@ -16,8 +16,6 @@ import { Route, Switch } from 'react-router-dom'; //componente que me deja escri
 function App() {
   return (
     <React.Fragment>
-
-      <Navbar />
       <Header/>
       <h1>Movies</h1>
       <main>
@@ -38,6 +36,7 @@ function App() {
 
           <Route path='' component={NotFound} />
         </Switch>
+        <Footer />
       </main>
 
     </React.Fragment>
