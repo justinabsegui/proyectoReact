@@ -35,7 +35,6 @@ header{
     justify-content: space-between;
     font-family: 'Josefin Sans', sans-serif;
     width: 100%;
-    background-image: url("./Backkground\ Header.jpeg");
     margin: 80px;
 }
 
@@ -58,7 +57,7 @@ ul{
 form{ 
     align-items: flex-start;
 }
-.header,{
+.header{
     letter-spacing: 2px;
     word-spacing: 2px;
     color: white;

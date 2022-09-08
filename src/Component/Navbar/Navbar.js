@@ -13,6 +13,9 @@ function Navbar() {
                 <li> <Link to='/movies' className='links'> Movies </Link> </li>
                 <li>Username <img src="/img/user.jpg" alt="" /></li>
             </ul>
+            <div className='banner'>	
+            <img src="../images/Backkground\ Header.jpeg" alt="Banner" />
+            </div>
         </nav >
     )
 }
