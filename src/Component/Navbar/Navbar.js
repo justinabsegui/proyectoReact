@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 function Navbar(){
 
     return (
-        <nav>
-            <ul className="main-nav">
+        <nav className="main-nav">
+            <ul>
                 <li>
                     <Link to='/PopularMovies'> Popular Movies </Link>
                     <Link to='/LatestMovies'> Latest Movies </Link>

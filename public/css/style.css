@@ -24,14 +24,19 @@ h4, h5, h1 {
     justify-content: space-between;
 }
 
-
+.header{
+    background-color: #000;
+}
 /*Header*/
 header{
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
     flex-wrap: wrap;
+    color: #000;
     justify-content: space-between;
     width: 100%;
+    background-image: url("./Backkground\ Header.jpeg");
+    background-color: #000;
 }
 form{ 
     align-items: flex-start;
@@ -148,7 +153,10 @@ i{
     margin:25% ;
 }
 
-
+.main-nav{
+    color: #000;
+   background-color: rgb(30, 57, 82);
+}
 /*Home*/
 .prese {
     font-family:'Josefin Sans', sans-serif;
