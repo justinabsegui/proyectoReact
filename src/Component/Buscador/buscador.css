@@ -1,0 +1,12 @@
+  .adentro {
+      color: black;
+  }
+
+  .boton {
+      background-color: blue;
+      position: absolute;
+      border: none;
+      border-left: solid 1px var(--light-gray);
+      color: var(--gray);
+      cursor: pointer;
+  }

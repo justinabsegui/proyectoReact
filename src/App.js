@@ -9,7 +9,7 @@ import LatestMovies from "./Component/Movies/Latest Movies/LatestMovies";
 import SerieCard from "./Component/Series/SerieCard/SerieCard";
 
 import PopularSerie from "./Component/Series/Popular Series/PopularSeries";
-import NotFound from "./Component/Notfound/NotFound";
+// import NotFound from "./Component/Notfound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
 
@@ -34,7 +34,7 @@ function App() {
 
           {/* <Route path='/Series/id/:id' component={DetalleSeries} /> */}
 
-          <Route path='' component={NotFound} />
+          {/* <Route path='' component={NotFound} /> */}
         </Switch>
         <Footer />
       </main>
