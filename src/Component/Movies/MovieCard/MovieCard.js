@@ -34,7 +34,7 @@ class MovieCard extends Component {
             return (
                 <article className='movie-card'>
                     <h2>{this.props.name}</h2>
-                    <h2>{this.props.datosPersonaje.name}</h2> {/* Nombre */}
+                    <h2>{this.props.datosPersonaje.title}</h2> {/* Nombre */}
                     <p>{this.props.datosPersonaje.status}</p> {/* Estado */}
                     <p>{this.props.datosPersonaje.species}</p> {/* Especie */}
                     <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
