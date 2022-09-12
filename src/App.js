@@ -3,11 +3,15 @@ import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./screens/Home/Home";
 import Loader from "./Component/Loader/Loader";
+import Favoritos from "./Component/Favoritos/Favoritos";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
+import NotFound from "./screens/notfound/notfound";
+
 
 // import NotFound from "./Component/Notfound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
+import TopRatedMovies from "./Component/Movies/TopRatedMovies/TopRatedMovies";
 
 function App() {
   return (
@@ -18,17 +22,15 @@ function App() {
         <Switch>
           <Route path='/' exact={true} component={Home} />
           
-          {/* <Route path='/Favoritos' component={Favoritos} /> */}
+          {<Route path='/Favoritos' component={Favoritos} />}
 
-          {/* <Route path='/VerTodas' component={VerTodas} /> */}
+          <Route path='/TopRatedMovies' component={TopRatedMovies} />
 
           <Route path='/PopularMovies' component={PopularMovies} />
 
           {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
 
-          {/* <Route path='/series/id/:id' component={DetalleSeries} /> */}
-
-          {/* <Route path='' component={NotFound} /> */}
+          {<Route path='' component={NotFound} />}
         </Switch>
         <Footer />
       </main>
