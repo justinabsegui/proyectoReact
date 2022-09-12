@@ -1,6 +1,6 @@
 import React from 'react';
 import TopRatedMovies from "./Component/Movies/Top Rated Movies/TopRatedMovies";
-import LatestMovies from "./Component/Movies/Latest Movies/LatestMovies";
+import PopularMovies from '../../Component/Movies/Popular Movies/PopularMovies';
 
 
 function Movies (){
@@ -8,7 +8,7 @@ function Movies (){
         <React.Fragment>
             <h2> Movies </h2>
             <TopRatedMovies/>
-            <LatestMovies/>
+            <PopularMovies/>
         </React.Fragment>
     )
 }

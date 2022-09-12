@@ -1,18 +1,14 @@
 import React from 'react';
-import Header from '../../Component/Header/Header';
-import Footer from '../../Component/Footer/Footer';
-import Buscador from '../../Component/Buscador/Buscador';
-import LatestMovies from '../../Component/Movies/Latest Movies/LatestMovies';
-import TopRatedMovies from '../../Component/Movies/Top Rated Movies/TopRatedMovies';
-import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
+import PopularMovies from '../Movies/Popular Movies/PopularMovies';
+import TopRatedMovies from '../Movies/Top Rated Movies/TopRatedMovies';
+
 
 function Home(){
 
     return (
         <div>
-            <Header/>
             <TopRatedMovies />
-            <Footer/>
+            <PopularMovies />
         </div>
     )
 }
