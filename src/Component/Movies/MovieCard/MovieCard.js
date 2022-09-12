@@ -22,32 +22,33 @@ class MovieCard extends Component {
         }
     }
 
-    render() {
-        // console.log(this.props);
-        return (
-            <React.Fragment>
-                {
-                    this.state.data.length === 0 ?
-                        <Loader />
-                        :
-                        <>
-                            <article className='movie-card'>
-                                <h2>{this.props.name}</h2>
-                                <h2>{this.props.datosPersonaje.title}</h2> {/* Nombre */}
-                                <p>{this.props.datosPersonaje.status}</p> {/* Estado */}
-                                <p>{this.props.datosPersonaje.species}</p> {/* Especie */}
-                                <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
-                                <p className='more'>Ver más</p>
-                                <section className='extra'>
-                                    <p>Datos extra: {this.props.datosPersonaje.algooooooo}</p> {/* poner otra cosa que no sea el name  */}
-                                </section>
-                                <p className='delete' onClick={() => this.props.borrar(this.props.id)}>Borrar</p>
-                            </article>
-                        </>
-                }
-            </React.Fragment>
-        )
-    }
-}
+    // agregarYSacarFavs(id) {
+    //     //guardo ids en array dentro de localStorage
+    //     console.log('Agregando y sacando favs')
+
+
+
+
+        render(){
+            // console.log(this.props);
+            return (
+                <article className='movie-card'>
+                
+                    <h2 className= 'extra'>{this.props.name}</h2>
+                    <h2 className= 'extra'>{this.props.datosPersonaje.title}</h2> {/* Nombre */}
+                    <p className= 'extra'>{this.props.datosPersonaje.status}</p> {/* Estado */}
+                    <p className= 'extra'>{this.props.datosPersonaje.species}</p> {/* Especie */}
+                  
+                    <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
+                    <p className='more'>Ver más</p>
+                    <section >
+                        <p className= 'extra'>Datos extra: {this.props.datosPersonaje.algo}</p> {/* poner otra cosa que no sea el name  */}
+                    </section>
+                    <p className='extra' onClick={() => this.props.borrar(this.props.id)}>Borrar</p>
+                </article>
+
+            )
+        }
+    } 
 
 export default MovieCard;

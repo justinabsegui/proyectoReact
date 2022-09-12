@@ -1,6 +1,6 @@
 import React from 'react';
-import PopularMovies from '../Movies/Popular Movies/PopularMovies';
-import TopRatedMovies from '../Movies/Top Rated Movies/TopRatedMovies';
+import PopularMovies from '../../Component/Movies/PopularMovies/PopularMovies';
+import TopRatedMovies from '../../Component/Movies/TopRatedMovies/TopRatedMovies';
 
 
 function Home(){

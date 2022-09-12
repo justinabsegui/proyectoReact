@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
-import Home from "./screens/home/home";
-import PopularMovies from "./Component/Movies/Popular Movies/PopularMovies";
+import Home from "./screens/Home/Home";
+import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 
 // import NotFound from "./Component/Notfound/NotFound";
 

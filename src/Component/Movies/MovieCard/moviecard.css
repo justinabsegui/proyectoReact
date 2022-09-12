@@ -1,4 +1,4 @@
-.character-card{
+.movie-card{
     padding: 10px;
     margin-bottom: 20px;
     width: 24%;
@@ -6,12 +6,12 @@
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
 }
-.character-card img{
+.movie-card img{
     width: 100%;
     margin-bottom: 20px; 
 
 }
-.character-card:hover,
+.movie-card:hover,
 .active{
 box-shadow: 0rem 0rem 10px 8px blue;
 }
@@ -27,4 +27,7 @@ box-shadow: 0rem 0rem 10px 8px blue;
 }
 .show{
     display: block;
+}
+.extra{
+    color:black;
 }

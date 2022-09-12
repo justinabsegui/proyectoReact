@@ -32,7 +32,7 @@ class TopRatedMovies extends Component {
                             <h2 className="TituloC">Top Rated Movies</h2>
                         </div>
                         <section className='card-container'>
-                            {this.state.data.map((unMovies, idx )=> <MovieCard key={unMovies.title + idx} data={unMovies}  image={unMovies.poster_path} title={unMovies.title}/>)}
+                            {this.state.data.map((unMovies, idx )=> <MovieCard key={unMovies.title + idx} datosPersonaje={unMovies}  image={unMovies.poster_path} title={unMovies.title}/>)}
                         </section>
                     </>
                 }
