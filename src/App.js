@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./screens/Home/Home";
+import Loader from "./Component/Loader/Loader";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 
 // import NotFound from "./Component/Notfound/NotFound";
@@ -24,8 +25,6 @@ function App() {
           <Route path='/PopularMovies' component={PopularMovies} />
 
           {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
-
-          {/* <Route path='/LatestSeries' component={LatestSeries} /> */}
 
           {/* <Route path='/series/id/:id' component={DetalleSeries} /> */}
 

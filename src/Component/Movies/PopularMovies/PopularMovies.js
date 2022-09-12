@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
-
+import Loader from "../../Loader/Loader";
 
 class PopularMovies extends Component {
     constructor(props){

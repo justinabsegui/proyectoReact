@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 
 class Loader extends Component {
     constructor(props) {
@@ -19,7 +19,6 @@ class Loader extends Component {
                 })
             })
             .catch(error => console.log('el error es' + error))
-
     }
 
     render() {
