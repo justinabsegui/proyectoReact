@@ -8,6 +8,7 @@ import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 // import NotFound from "./Component/Notfound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
+import SearchResults from "./screens/SearchResults/SearchResults";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           {/* <Route path='/VerTodas' component={VerTodas} /> */}
 
           <Route path='/PopularMovies' component={PopularMovies} />
+
+          <Route path='/search-results/:title' component={SearchResults} />
 
           {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
 

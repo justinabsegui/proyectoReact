@@ -3,10 +3,12 @@
   }
 
   .boton {
-      background-color: blue;
-      position: absolute;
-      border: none;
-      border-left: solid 1px var(--light-gray);
-      color: var(--gray);
-      cursor: pointer;
+        background-color: blue;
+        font-family: 'Josefin Sans', sans-serif;
+        align-self: center;
+        margin: 1px;
+        margin-top: 12px;
+        padding: 9px;
+        border: 0px white solid;
+        border-radius: 50px;
   }
