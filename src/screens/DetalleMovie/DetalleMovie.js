@@ -6,15 +6,16 @@ class DetalleMovies extends Component {
     constructor(props){
         super(props);
         this.state ={
-            data:[]
+            id:``
         }
     }
 
-    componentDidMount( ){
-        fetch(`https://api.themoviedb.org/3/find/${external_id}?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&external_source=imdb_id`)
+    detalle(id){   
+        
+        fetch(`https://api.themoviedb.org/3/find/${id}?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&external_source=imdb_id`)
         .then(response =>response.json())
-        .then(data => this.setState(
-            {data: data.results}
+        .then(peli => this.setState(
+            {peli: peli.results}
         ))
         .catch(error => console.log('el error fue '+ error ))
     }

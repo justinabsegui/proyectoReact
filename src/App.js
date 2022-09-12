@@ -3,6 +3,7 @@ import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./screens/Home/Home";
 import Loader from "./Component/Loader/Loader";
+import DetalleMovies from "./screens/DetalleMovie/DetalleMovie";
 import Favoritos from "./Component/Favoritos/Favoritos";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
@@ -32,6 +33,7 @@ function App() {
           <Route path='/search-results/:title' component={SearchResults} />
 
           {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
+          {<Route path='/movie/id/:id' component={DetalleMovies} />}
 
           {<Route path='' component={NotFound} />}
         </Switch>
