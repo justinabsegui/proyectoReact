@@ -7,8 +7,7 @@ import DetalleMovies from "./screens/DetalleMovie/DetalleMovie";
 import Favoritos from "./Component/Favoritos/Favoritos";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
-import TopRatedSeries from "./Component/Series/TopRatedSeries/TopRatedSeries";
-import PopularSeries from "./Component/Series/PopularSeries/PopularSeries";
+
 
 // import NotFound from "./Component/Notfound/NotFound";
 
@@ -30,10 +29,6 @@ function App() {
           <Route path='/TopRatedMovies' component={TopRatedMovies} />
 
           <Route path='/PopularMovies' component={PopularMovies} />
-
-          <Route path='/TopRatedSeries' component={TopRatedSeries} />
-
-          <Route path='/PopularSeries' component={PopularSeries} />
 
           <Route path='/search-results/:title' component={SearchResults} />
 

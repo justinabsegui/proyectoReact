@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Filtro from "../Filtro/Filtro";
 import MovieCard from "../Movies/MovieCard/MovieCard";
-import SerieCard from "../Series/SeriesCard/SeriesCard";
+
 
 class VerTodas extends Component {
     constructor(props) {
@@ -113,23 +113,6 @@ class VerTodas extends Component {
                 <section className='card-container'>
                     {this.state.dataMovie.map((Movies, idx) => <MovieCard key={Movies + idx} data={Movies} image={Movies.poster_path} title={Movies.title} descripcion={Movies.overview} />)}
                 </section>
-
-
-
-
-                <div>
-                    <h2 className="TituloC">Series</h2>
-                    <h3 className="letrablanca">Filtrar Series</h3>
-                    <Filtro filtro={(nombre) => this.filtrarSeries(nombre)} />
-                    <button className='button-54' onClick={() => this.traerMasSeries()}> Traer más Series </button>
-                </div>
-                <section className='card-container'>
-                    {this.state.dataSeries.map((unSeries, idx) => <SerieCard key={unSeries + idx} data={unSeries} image={unSeries.poster_path} title={unSeries.name} descripcion={unSeries.overview} />)}
-                </section>
-
-
-
-
 
             </React.Fragment>
 
