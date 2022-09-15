@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import './moviecard.css'
+
+// didmount
+// traer local chequear si el id esta 
+// id true
+
 class MovieCard extends Component {
     constructor(props) {
         super(props);
@@ -21,19 +26,19 @@ class MovieCard extends Component {
             })
         }
     }
-    favoritos() {
-        if (this.state.favoritos) {
-            this.setState({
-                favoritos: false,
-                text2: 'Agregar a favoritos'
-            })
-        } else {
-            this.setState({
-                favoritos: true,
-                text2: 'Quitar de favoritos'
-            })
-        }
-    }
+    // favoritos() {
+    //     if (this.state.favoritos) {
+    //         this.setState({
+    //             favoritos: false,
+    //             text2: 'Agregar a favoritos'
+    //         })
+    //     } else {
+    //         this.setState({
+    //             favoritos: true,
+    //             text2: 'Quitar de favoritos'
+    //         })
+    //     }
+    // }
 
     // agregarYSacarFavs(id) {
     //     //guardo ids en array dentro de localStorage
