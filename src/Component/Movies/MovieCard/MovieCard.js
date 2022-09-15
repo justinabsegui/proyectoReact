@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './moviecard.css'
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 // didmount
 // traer local chequear si el id esta 
@@ -8,25 +8,58 @@ import {Link} from 'react-router-dom';
 
 class MovieCard extends Component {
     constructor(props) {
-        super(props);   
-        this.state = {
-            viewMore: false,
-            text: 'Ver más',
-        }
-    }
-    viewMore() {
-        if (this.state.viewMore) {
-            this.setState({
+            super(props);   
+            this.state = {
+                valor: [],
                 viewMore: false,
-                text: 'Ver más'
-            })
-        } else {
+                fav: false,
+            }//recibe por props la info que le pasa el padre (movies)
+        }
+
+        viewMore(){
             this.setState({
-                viewMore: true,
-                text: 'Ver menos'
+              viewMore: !this.state.viewMore
             })
         }
-    }
+
+        componentDidMount() {
+            let favoritos = [];
+            let Storage = localStorage.getItem('favoritos')
+    
+            if (Storage !== null) {
+                let favoritos = JSON.parse(Storage);
+            }
+    
+            if (favoritos.includes(this.props.datosPelicula.id)) {
+                this.setState({
+                    fav: true
+                })
+            }
+    
+        }
+    
+
+    // constructor(props) {
+    //     super(props);   
+    //     this.state = {
+    //         viewMore: false,
+    //         text: 'Ver más',
+    //     }
+    // }
+
+    // viewMore() {
+    //     if (this.state.viewMore) {
+    //         this.setState({
+    //             viewMore: false,
+    //             text: 'Ver más'
+    //         })
+    //     } else {
+    //         this.setState({
+    //             viewMore: true,
+    //             text: 'Ver menos'
+    //         })
+    //     }
+    // }
     // componentDidMount(){
     //     let favoritos = [];
     //     let recuperoStorage = localStorage.getItem('favoritos')
