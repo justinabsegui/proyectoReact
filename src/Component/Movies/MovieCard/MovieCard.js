@@ -27,9 +27,15 @@ class MovieCard extends Component {
             })
         }
     }
+<<<<<<< HEAD
     // componentDidMount(){
     //     let favoritos = [];
     //     let recuperoStorage = localStorage.getItem('favoritos')
+=======
+    /* componentDidMount(){
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+>>>>>>> bc65c6a93e8e2fe663f31a57c894bbe6196e7d21
 
     //     if(recuperoStorage !== null){
     //         let favoritosToArray = JSON.parse(recuperoStorage);
@@ -42,7 +48,11 @@ class MovieCard extends Component {
     //         })
     //     }
 
+<<<<<<< HEAD
     //  }
+=======
+    } */
+>>>>>>> bc65c6a93e8e2fe663f31a57c894bbe6196e7d21
     render() {
         // console.log(this.props);
         return (
@@ -52,13 +62,14 @@ class MovieCard extends Component {
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
                 <p className='extra'> Release date: {this.props.datosPelicula.release_date}</p>
 
-                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
-                <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
-
                 <section >
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.datosPelicula.overview}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.datosPelicula.vote_average}</p>
                 </section>
+                
+                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
+                <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
+                
             </article>
         )
     }
