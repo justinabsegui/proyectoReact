@@ -3,8 +3,8 @@ import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./screens/Home/Home";
 import Loader from "./Component/Loader/Loader";
+/* import Favoritos from "./Component/Favoritos/Favoritos"; */
 import DetalleMovie from "./screens/DetalleMovie/DetalleMovie";
-import Favoritos from "./Component/Favoritos/Favoritos";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
 
@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route path='/' exact={true} component={Home} />
           
-          {<Route path='/Favoritos' component={Favoritos} />}
+          {/* {<Route path='/Favoritos' component={Favoritos} />} */}
 
           <Route path='/TopRatedMovies' component={TopRatedMovies} />
 
