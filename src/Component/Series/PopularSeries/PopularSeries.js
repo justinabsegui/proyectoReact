@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import MovieCard from "../MovieCard/MovieCard";
+import SerieCard from "../SeriesCard/SeriesCard";
 
-
-class PopularMovies extends Component {
+class PopularSeries extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -25,10 +24,10 @@ class PopularMovies extends Component {
             <React.Fragment> 
                  <button onClick={()=>this.traerMas()}> Traer más </button>
                 <div>
-                    <h2 className="TituloC">Popular Movies</h2>
+                    <h2 className="TituloC">Popular Series</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unPopularMovies, idx )=> <MovieCard key={unPopularMovies + idx} datosPersonaje={unPopularMovies}  image={unPopularMovies.poster_path} title={unPopularMovies.title}/>)}
+                    {this.state.data.map((unPopularSeries, idx )=> <SerieCard key={unPopularSeries + idx} datosPersonaje={unPopularSeries}  image={unPopularSeries.poster_path} title={unPopularSeries.title}/>)}
                 </section>
             </React.Fragment>
         )
@@ -36,4 +35,4 @@ class PopularMovies extends Component {
     }
 }
 
- export default PopularMovies;
+ export default PopularSeries;

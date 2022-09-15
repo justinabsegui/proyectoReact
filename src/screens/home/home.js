@@ -7,8 +7,10 @@ function Home(){
 
     return (
         <div>
-          {  <TopRatedMovies />}
+            <TopRatedMovies />
             <PopularMovies />
+            
+
         </div>
     )
 }

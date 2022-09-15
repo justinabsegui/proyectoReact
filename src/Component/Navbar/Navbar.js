@@ -23,6 +23,9 @@ class Navbar extends Component {
                         <Link to='/aboutus'> About us </Link>
                     </li>
                     <li><Link to='/PopularMovies' className='links'> Popular Movies</Link> </li>
+                    
+                    <li> <Link to='/VerTodas' className='letrablanca' > Ver Todas </Link> </li>
+                    
                     <li> <Link to='/movies' className='links'> Movies </Link> </li>
                     <Buscador/>
                     <ul className="user">

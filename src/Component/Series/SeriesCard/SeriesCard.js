@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import './moviecard.css'
-class MovieCard extends Component {
+import './seriecard.css'
+class SerieCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -8,7 +8,6 @@ class MovieCard extends Component {
             text: 'Ver más',
         }
     }
-    
     viewMore() {
         if (this.state.viewMore) {
             this.setState({
@@ -23,17 +22,10 @@ class MovieCard extends Component {
         }
     }
 
-    // agregarYSacarFavs(id) {
-    //     //guardo ids en array dentro de localStorage
-    //     console.log('Agregando y sacando favs')
-
-
-
-
         render(){
             // console.log(this.props);
             return (
-                <article className='movie-card'>
+                <article className='serie-card'>
                 
                     <h2 className= 'extra'>{this.props.name}</h2>
                     <h2 className= 'extra'>{this.props.datosPersonaje.title}</h2> {/* Nombre */}
@@ -52,4 +44,4 @@ class MovieCard extends Component {
         }
     } 
 
-export default MovieCard;
+export default SerieCard;

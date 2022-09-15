@@ -7,14 +7,15 @@ import DetalleMovies from "./screens/DetalleMovie/DetalleMovie";
 import Favoritos from "./Component/Favoritos/Favoritos";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
-
+import TopRatedSeries from "./Component/Series/TopRatedSeries/TopRatedSeries";
+import PopularSeries from "./Component/Series/PopularSeries/PopularSeries";
 
 // import NotFound from "./Component/Notfound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
 import SearchResults from "./screens/SearchResults/SearchResults";
 import TopRatedMovies from "./Component/Movies/TopRatedMovies/TopRatedMovies";
-
+import VerTodas from "./Component/VerTodas/VerTodas";
 function App() {
   return (
     <React.Fragment>
@@ -30,7 +31,13 @@ function App() {
 
           <Route path='/PopularMovies' component={PopularMovies} />
 
+          <Route path='/TopRatedSeries' component={TopRatedSeries} />
+
+          <Route path='/PopularSeries' component={PopularSeries} />
+
           <Route path='/search-results/:title' component={SearchResults} />
+
+         <Route path = '/VerTodas' component = {VerTodas} />
 
           {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
           {<Route path='/movie/id/:id' component={DetalleMovies} />}
