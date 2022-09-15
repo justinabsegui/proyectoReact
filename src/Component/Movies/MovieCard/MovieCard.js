@@ -27,15 +27,9 @@ class MovieCard extends Component {
             })
         }
     }
-<<<<<<< HEAD
     // componentDidMount(){
     //     let favoritos = [];
     //     let recuperoStorage = localStorage.getItem('favoritos')
-=======
-    /* componentDidMount(){
-        let favoritos = [];
-        let recuperoStorage = localStorage.getItem('favoritos')
->>>>>>> bc65c6a93e8e2fe663f31a57c894bbe6196e7d21
 
     //     if(recuperoStorage !== null){
     //         let favoritosToArray = JSON.parse(recuperoStorage);
@@ -48,11 +42,7 @@ class MovieCard extends Component {
     //         })
     //     }
 
-<<<<<<< HEAD
     //  }
-=======
-    } */
->>>>>>> bc65c6a93e8e2fe663f31a57c894bbe6196e7d21
     render() {
         // console.log(this.props);
         return (
