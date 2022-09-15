@@ -111,7 +111,7 @@ class VerTodas extends Component {
                     <button className='button-54' onClick={() => this.traerMasMovies()}> Traer más Movies </button>
                 </div>
                 <section className='card-container'>
-                    {this.state.dataMovie.map((Movies, idx) => <MovieCard key={Movies + idx} data={Movies} image={Movies.poster_path} title={Movies.title} descripcion={Movies.overview} />)}
+                    {this.state.dataMovie.map((Movie, idx) => <MovieCard key={Movie.title + idx} data={Movie} image={Movie.poster_path} title={Movie.title} descripcion={Movie.overview} />)}
                 </section>
 
             </React.Fragment>
