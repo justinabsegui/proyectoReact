@@ -28,7 +28,7 @@ class PopularMovies extends Component {
                     <h2 className="TituloC">Popular Movies</h2>
                 </div>
                 <section className='card-container'>
-                    {this.state.data.map((unPopularMovies, idx )=> <MovieCard key={unPopularMovies + idx} datosPersonaje={unPopularMovies}  image={unPopularMovies.poster_path} title={unPopularMovies.title}/>)}
+                    {this.state.data.map((unPopularMovies, idx )=> <MovieCard key={unPopularMovies + idx} datosPelicula={unPopularMovies}  image={unPopularMovies.poster_path} title={unPopularMovies.title}/>)}
                 </section>
             </React.Fragment>
         )
