@@ -27,22 +27,22 @@ class MovieCard extends Component {
             })
         }
     }
-    componentDidMount(){
-        let favoritos = [];
-        let recuperoStorage = localStorage.getItem('favoritos')
+    // componentDidMount(){
+    //     let favoritos = [];
+    //     let recuperoStorage = localStorage.getItem('favoritos')
 
-        if(recuperoStorage !== null){
-            let favoritosToArray = JSON.parse(recuperoStorage);
-            favoritos = favoritosToArray
-        }
+    //     if(recuperoStorage !== null){
+    //         let favoritosToArray = JSON.parse(recuperoStorage);
+    //         favoritos = favoritosToArray
+    //     }
 
-        if(favoritos.includes(this.props.results.id)){ //results.id???
-            this.setState({
-                favsMessage: 'Quitar de favoritos'
-            })
-        }
+    //     if(favoritos.includes(this.props.results.id)){ //results.id???
+    //         this.setState({
+    //             favsMessage: 'Quitar de favoritos'
+    //         })
+    //     }
 
-    }
+    //  }
     render() {
         // console.log(this.props);
         return (
