@@ -21,7 +21,7 @@ class SearchResults extends Component {
     render(){
         return(
             <section className='card-container'>
-                    {this.state.resultado.map((peliresult, idx)=> <MovieCard key={peliresult.title + idx} datosPersonaje={peliresult}  image={peliresult.poster_path} title={peliresult.title}/>)}
+                    {this.state.resultado.map((peliresult, idx)=> <MovieCard key={peliresult.title + idx} datosPelicula={peliresult}  image={peliresult.poster_path} title={peliresult.title}/>)}
             </section>
         )
     }

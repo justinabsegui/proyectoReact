@@ -48,21 +48,20 @@ class MovieCard extends Component {
         return (
             <article className='movie-card'>
 
-                <h2 className='extra'>{this.props.datosPersonaje.title}</h2>
+                <h2 className='extra'>{this.props.datosPelicula.title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
-                <p className='extra'> Release date: {this.props.datosPersonaje.release_date}</p>
+                <p className='extra'> Release date: {this.props.datosPelicula.release_date}</p>
 
                 <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
                 <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
 
                 <section >
-                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.datosPersonaje.overview}</p>
-                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.datosPersonaje.vote_average}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.datosPelicula.overview}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.datosPelicula.vote_average}</p>
                 </section>
             </article>
-
         )
     }
-}
+};       
 
 export default MovieCard;
