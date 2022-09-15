@@ -34,18 +34,17 @@ class MovieCard extends Component {
             // console.log(this.props);
             return (
                 <article className='movie-card'>
-                
-                    <h2 className= 'extra'>{this.props.name}</h2>
-                    <h2 className= 'extra'>{this.props.datosPersonaje.title}</h2> {/* Nombre */}
-                    <p className= 'extra'>{this.props.datosPersonaje.status}</p> {/* Estado */}
-                    <p className= 'extra'>{this.props.datosPersonaje.species}</p> {/* Especie */}
+            
+                <h2 className= 'extra'>{this.props.datosPersonaje.title}</h2> 
                   
                     <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
+                    <p className= 'extra'> Release date: {this.props.datosPersonaje.release_date}</p> 
                     <p className='more'>Ver más</p>
                     <section >
-                        <p className= 'extra'>Datos extra: {this.props.datosPersonaje.algo}</p> {/* poner otra cosa que no sea el name  */}
+                        <p className= 'extra'> {this.props.datosPersonaje.overview}</p> 
+                        <p className= 'extra'> Rating: {this.props.datosPersonaje.vote_average}</p> 
+
                     </section>
-                    <p className='extra' onClick={() => this.props.borrar(this.props.id)}>Borrar</p>
                 </article>
 
             )
