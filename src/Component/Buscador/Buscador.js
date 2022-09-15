@@ -22,7 +22,7 @@ class Buscador extends Component {
     render() {
         return (
             <form onSubmit={(e) => this.prevenirRecarga(e)}>
-               <input className='adentro'type='text' placeholder='¡Busca aqui!'onChange={(e) => this.guardarCambios(e)} value= {this.state.valor} />
+               <input className='adentro'type='text' placeholder='¡Busca aqui!' onChange={(e) => this.guardarCambios(e)} value= {this.state.valor} />
                 <Link to={`/search-results/${this.state.valor}`} className='boton'>Buscar</Link>
             </form>
         )
