@@ -25,7 +25,7 @@ class Loader extends Component {
         return (
             <div>
                 {
-                    this.state.gif_url == ''
+                    this.state.gif_url === ''
                         ? <h2>Cargando...</h2>
                         : <div>
                             <img alt='loading gif' src={this.state.gif_url} />
