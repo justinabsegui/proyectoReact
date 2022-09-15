@@ -9,11 +9,6 @@ class VerTodas extends Component {
         this.state = {
             dataMovie: [],
             nextUrl: 1,
-            dataSeries: [],
-            backup: [],
-            backupSeries: [],
-
-
         }
     }
 
@@ -32,24 +27,8 @@ class VerTodas extends Component {
 
             ))
             .catch(error => console.log('el error fue ' + error))
-
-
-
-
-        //Mejores Series
-
-        fetch("https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c ")
-            .then(response => response.json())
-            .then(data => this.setState(
-                {
-                    dataSeries: data.results,
-                    backupSeries: data.results
-                }
-            ))
-            .catch(error => console.log('el error fue ' + error))
-
-
-    }
+        };
+     
     traerMasMovies() {
         //Traer la siguiente página de personajes
 
@@ -62,17 +41,6 @@ class VerTodas extends Component {
             .catch()
     }
 
-    traerMasSeries() {
-        //Traer la siguiente página de personajes
-
-        fetch(`https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.nextUrl}`)
-            .then(res => res.json())
-            .then(data => this.setState({
-                dataSeries: data.results.concat(this.state.dataSeries),
-                nextUrl: data.page + 1
-            }))
-            .catch()
-    }
 
 
     filtrarMovie(nombre) {
@@ -82,20 +50,7 @@ class VerTodas extends Component {
         this.setState({
             dataMovie: arrayFiltrado
 
-        })
-
-    }
-
-    filtrarSeries(nombre) {
-        let arrayFiltrado =
-            this.state.backupSeries.filter(serie => serie.name.toLowerCase().includes(nombre.toLowerCase()))
-
-        this.setState({
-            dataSeries: arrayFiltrado
-
-        })
-
-    }
+        })}
 
     render() {
         console.log(this.state.nextUrl);
@@ -115,8 +70,6 @@ class VerTodas extends Component {
                 </section>
 
             </React.Fragment>
-
-
         )
     }
 }
