@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './moviecard.css'
+import {Link} from 'react-router-dom';
 
 // didmount
 // traer local chequear si el id esta 
@@ -7,7 +8,7 @@ import './moviecard.css'
 
 class MovieCard extends Component {
     constructor(props) {
-        super(props);
+        super(props);   
         this.state = {
             viewMore: false,
             text: 'Ver más',
@@ -26,24 +27,22 @@ class MovieCard extends Component {
             })
         }
     }
-    // favoritos() {
-    //     if (this.state.favoritos) {
-    //         this.setState({
-    //             favoritos: false,
-    //             text2: 'Agregar a favoritos'
-    //         })
-    //     } else {
-    //         this.setState({
-    //             favoritos: true,
-    //             text2: 'Quitar de favoritos'
-    //         })
-    //     }
-    // }
+    componentDidMount(){
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
 
-    // agregarYSacarFavs(id) {
-    //     //guardo ids en array dentro de localStorage
-    //     console.log('Agregando y sacando favs')
+        if(recuperoStorage !== null){
+            let favoritosToArray = JSON.parse(recuperoStorage);
+            favoritos = favoritosToArray
+        }
 
+        if(favoritos.includes(this.props.results.id)){ //results.id???
+            this.setState({
+                favsMessage: 'Quitar de favoritos'
+            })
+        }
+
+    }
     render() {
         // console.log(this.props);
         return (
