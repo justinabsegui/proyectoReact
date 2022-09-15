@@ -27,7 +27,7 @@ class MovieCard extends Component {
             })
         }
     }
-    componentDidMount(){
+    /* componentDidMount(){
         let favoritos = [];
         let recuperoStorage = localStorage.getItem('favoritos')
 
@@ -42,7 +42,7 @@ class MovieCard extends Component {
             })
         }
 
-    }
+    } */
     render() {
         // console.log(this.props);
         return (
@@ -52,13 +52,14 @@ class MovieCard extends Component {
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
                 <p className='extra'> Release date: {this.props.datosPelicula.release_date}</p>
 
-                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
-                <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
-
                 <section >
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.datosPelicula.overview}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.datosPelicula.vote_average}</p>
                 </section>
+                
+                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
+                <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
+                
             </article>
         )
     }
