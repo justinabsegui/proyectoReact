@@ -3,6 +3,7 @@
     box-sizing: border-box;
     color:#ffffff;
     text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
    
 }
 
@@ -28,114 +29,7 @@ h4, h5, h1 {
     
 }
 
-/* /Header/ */
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-family: 'Josefin Sans', sans-serif;
-    width: 100%;
-    margin: 80px;
-}
 
-main-nav{
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-family: 'Josefin Sans', sans-serif;
-    width: 100%;
-}
-
-ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
-}
-
-form{ 
-    align-items: flex-start;
-}
-.header{
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: white;
-    text-decoration: none;
-}
-input, button{
-    font-family: 'Josefin Sans', sans-serif;
-    align-self: center;
-    margin: 1px;
-    margin-top: 12px;
-    padding: 9px;
-    border: 0px white solid;
-    border-radius: 50px;
-}
-button{
-    color: black;
-    padding: 5px;
-}
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0%;
-}
-.logo{
-    margin-left: 20px;
-    margin-right: 10px;
-}
-.pre{
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    letter-spacing: 3px;
-    text-align: right;
-}
-.alerta{
-    color:rgb(136, 20, 20);
-    font-size: 18px;
-}
-.closeIcon{
-    display: none;
-    color: rgb(136, 20, 20);
-}
-
-
-
-/* /Footer/ */
-footer{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 13px;
-    margin: 16px;
-    padding-top: 80px;
-    color: white;
-    word-spacing: 2px;
-}
-.foot{
-    color:white;
-    text-decoration: none;
-    margin-left: 1%;
-}
-i{
-    margin: 4px;
-}
-
-/* GIF LOADER*/
-.gif {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-    height: 100vh;
-}
-.gif img {
-    margin:25% ;
-}
 /* /Home/ */
 .prese {
     font-family:'Josefin Sans', sans-serif;

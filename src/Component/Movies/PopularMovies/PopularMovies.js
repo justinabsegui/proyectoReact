@@ -18,7 +18,22 @@ class PopularMovies extends Component {
         ))
         .catch(error => console.log('el error fue '+ error ))
     }
-
+    // traerMas(){
+    //     //Traer la siguiente página de personajes
+    //     fetch(this.state.nextUrl)
+    //         .then( res => res.json())
+    //         .then( data => this.setState({
+    //             personajes: data.results.concat(this.state.personajes),
+    //             nextUrl: data.info.next
+    //         }))
+    //         .catch()
+    // }
+    // borrar(id){
+    //     let personajesFiltrados = this.state.personajes.filter(unPersonaje => unPersonaje.id !== id);
+    //     this.setState({
+    //      personajes: personajesFiltrados
+    //     })
+    //  }
 
     render(){
         return(

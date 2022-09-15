@@ -1,31 +1,49 @@
 import React, { Component } from 'react';
 import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
 
-
 class Favoritos extends Component {
     constructor() {
         super();
-        this.state={
-            personajes: []
+        this.state = {
+            movies: [] //Es array de objetos literales con cada movie
         }
     }
 
-    componentDidMount(){
-     
+    componentDidMount() {
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+        if (recuperoStorage !== null) {
+            favoritos = JSON.parse(recuperoStorage) //es un array de ids
+            let movies = [];
+
+            //recorrer el array y pedirla al endpoint por los datos de cada personaje.
+            favoritos.forEach(unIdFavorito => {
+                //pedir por cada id los datos del personaje
+                let url = `https://buscarellinkdelaaaaaaapiiiiiiiiii${unIdFavorito}`//buscar el link de la api
+                fetch(url)
+                    .then(res => res.json())
+                    .then(data => movies.push(data))
+                    .catch(e => console.log(e))
+            })
+
+            console.log(movies);
+        }
+
+
     }
 
-    render(){
-        return(
-            <section>
-                {
-                    this.state.personajes.map(
-                       //aca va algo que comentooo
-                    )
-                }
-            </section>
+    render() {
+        return (
+            <React.Fragment>
+                <h2>Mis peliculas favoritas</h2>
+                <section className='card-container'>
+                    {
+                        this.state.movies.map((unaMovie, idx) => <MovieCard key={unaMovie.name + idx} datosMovie={unaMovie} />)
+                    }
+                </section>
+            </React.Fragment>
         )
     }
-
 
 }
 export default Favoritos

@@ -1,24 +1,34 @@
 .movie-card{
     padding: 10px;
     margin-bottom: 20px;
-    width: 24%;
-    background: #fff;
+    width: 23%;
+    background: rgb(228, 223, 223);
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 5px;
 }
 .movie-card img{
     width: 100%;
     margin-bottom: 20px; 
-
 }
 .movie-card:hover,
 .active{
-box-shadow: 0rem 0rem 10px 8px blue;
+box-shadow: 0rem 0rem 10px 8px rgb(255, 255, 255);
+}
+.character-card p {
+    margin: 3px 0;
+}
+.character-card h2 {
+    margin: 2px 0;
 }
 .more{
     color: blue;
 }
-.more:hover {
+.delete {
+    color: red;
+}
+.more:hover, 
+.delete:hover{
     text-decoration: underline;
     cursor: pointer;
 }

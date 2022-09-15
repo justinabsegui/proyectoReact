@@ -1,0 +1,73 @@
+/* /Header/ */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 80px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+main-nav{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
+form{ 
+    align-items: flex-start;
+}
+input, button{
+    align-self: center;
+    margin: 1px;
+    margin-top: 12px;
+    padding: 9px;
+    border: 0px white solid;
+    border-radius: 50px;
+}
+button{
+    color: black;
+    padding: 5px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0%;
+}
+.logo{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.pre{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    letter-spacing: 3px;
+    text-align: right;
+}
+.alerta{
+    color:rgb(136, 20, 20);
+    font-size: 18px;
+}
+.closeIcon{
+    display: none;
+    color: rgb(136, 20, 20);
+}
+

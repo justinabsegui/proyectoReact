@@ -1,0 +1,10 @@
+/* GIF LOADER*/
+.gif {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    height: 100vh;
+}
+.gif img {
+    margin:25% ;
+}

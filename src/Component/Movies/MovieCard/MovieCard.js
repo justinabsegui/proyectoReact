@@ -43,23 +43,63 @@ class MovieCard extends Component {
     //     }
 
     //  }
+
+    // agregarYQuitarDeFavoritos(id){
+    //     //Tiene que agegar un id dentro de un Array y guardarlo en localstorage.
+    //     // Si el id ya existe ofrecer al usuario la posibilidad de quitar el id del array de favoritos.
+    //     let favoritos = [];
+    //     let recuperoStorage = localStorage.getItem('favoritos')
+
+    //     if(recuperoStorage !== null){
+    //         let favoritosToArray = JSON.parse(recuperoStorage);
+    //         favoritos = favoritosToArray
+    //     }
+
+    //     //Preguntemos si el id ya está en el array.
+    //     if(favoritos.includes(id)){ //includes retorna un booleano.
+    //         favoritos = favoritos.filter(unId => unId !== id);
+    //         //mostar al usuario un nuevo texto: agregar a favoritos
+    //         this.setState({
+    //             favsMessage: 'Agregar a favoritos'
+    //         })
+    //     } else {
+    //         favoritos.push(id);
+    //         //mostar un texto diferente al usuario. Quitar de favs
+    //         this.setState({
+    //             favsMessage: 'Quitar de favoritos'
+    //         })
+    //     }
+
+
+    //     let favoritosToString = JSON.stringify(favoritos);
+    //     localStorage.setItem('favoritos', favoritosToString);
+
+    //     console.log(localStorage);
+
+    // }
+
     render() {
         // console.log(this.props);
         return (
             <article className='movie-card'>
-
+            <p onClick={()=>this.agregarYQuitarDeFavoritos(this.props.datosPelicula.id)}>{this.state.favsMessage}</p>
+               
                 <h2 className='extra'>{this.props.datosPelicula.title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
+                
+                {/* <Link to={`/movies/id/${this.props.datosPelicula.id}`}>
+                    <img src={this.props.datosPelicula.image} alt="" />
+                </Link> */}
+
                 <p className='extra'> Release date: {this.props.datosPelicula.release_date}</p>
 
                 <section >
-                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.datosPelicula.overview}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Overview: {this.props.datosPelicula.overview}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.datosPelicula.vote_average}</p>
                 </section>
                 
                 <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
-                <p className='more' onClick={() => this.favoritos()}>{this.state.text2}</p>
-                
+                <p className='delete' onClick={()=>this.props.borrar(this.props.datosPelicula.id)}>Borrar</p>
             </article>
         )
     }
