@@ -24,9 +24,9 @@ class Navbar extends Component {
                     </li>
                     <li><Link to='/PopularMovies' className='links'> Popular Movies</Link> </li>
                     
-                    <li> <Link to='/VerTodas' className='letrablanca' > Ver Todas </Link> </li>
-                    
-                    <li> <Link to='/movies' className='links'> Movies </Link> </li>
+                    <li> <Link to='/topratedmovies' className='links'> Top Rated Movies </Link> </li>
+                   
+                    <li> <Link to='/favoritos' className='links'> Favoritos </Link> </li>
                     <Buscador/>
                     <ul className="user">
                         <li>Nombre usuario <img src="/img/user.jpg" alt="" /></li>
