@@ -9,6 +9,7 @@ header{
     word-spacing: 2px;
     color: white;
     text-decoration: none;
+    
 }
 
 main-nav{
@@ -70,4 +71,3 @@ button{
     display: none;
     color: rgb(136, 20, 20);
 }
-
