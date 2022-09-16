@@ -19,7 +19,8 @@ class Favoritos extends Component {
             //recorrer el array y pedirla al endpoint por los datos de cada personaje.
             favoritos.forEach(unIdFavorito => {
                 //pedir por cada id los datos del personaje
-                let url = `https://buscarellinkdelaaaaaaapiiiiiiiiii${unIdFavorito}`//buscar el link de la api
+                let url = `/peliculas/id/${unIdFavorito}`//buscar el link de la api
+                // let url = `/peliculas/id/${this.props.datosPelicula}`
                 fetch(url)
                     .then(res => res.json())
                     .then(data => movies.push(data))
@@ -35,7 +36,7 @@ class Favoritos extends Component {
     render() {
         return (
             <React.Fragment>
-                <h2>Mis peliculas favoritas</h2>
+                <h2>My favourites movies</h2>
                 <section className='card-container'>
                     {
                         this.state.movies.map((unaMovie, idx) => <MovieCard key={unaMovie.name + idx} datosMovie={unaMovie} />)
