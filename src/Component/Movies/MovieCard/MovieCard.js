@@ -6,9 +6,9 @@ class MovieCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            favsMessage: 'Agregar a favoritos',
+            favsMessage: 'Add to favourites',
             viewMore: false,
-            text: 'Ver más',
+            text: 'Show more',
         }
     }
     componentDidMount() {
@@ -22,7 +22,7 @@ class MovieCard extends Component {
 
         if (favoritos.includes(this.props.datosPelicula.id)) {
             this.setState({
-                favsMessage: 'Quitar de favoritos'
+                favsMessage: 'Remove from favourites'
             })
         }
 
@@ -44,13 +44,13 @@ class MovieCard extends Component {
             favoritos = favoritos.filter(unId => unId !== id);
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
-                favsMessage: 'Agregar a favoritos'
+                favsMessage: 'Add to favourites'
             })
         } else {
             favoritos.push(id);
             //mostar un texto diferente al usuario. Quitar de favs
             this.setState({
-                favsMessage: 'Quitar de favoritos'
+                favsMessage: 'Remove from favourites'
             })
         }
 
@@ -65,12 +65,12 @@ class MovieCard extends Component {
         if (this.state.viewMore) {
             this.setState({
                 viewMore: false,
-                text: 'Ver más'
+                text: 'Show more'
             })
         } else {
             this.setState({
                 viewMore: true,
-                text: 'Ver menos'
+                text: 'Show less'
             })
         }
     }
@@ -80,16 +80,19 @@ class MovieCard extends Component {
         return (
             <article className='movie-card'>
 
-                <h2 className='extra'>{this.props.datosPelicula.title}</h2>
-                <p className='more' onClick={() => this.favs(this.props.datosPelicula.id)}>{this.state.favsMessage}</p>
-
+                <h2 className='titul'>{this.props.datosPelicula.title}</h2>
                 {/* ⚠️ Dejo Link solo en la foto del personaje. Si la aplico a toda la tarjeta anula el evento definido en Borrar porque Link reacciona primero que el evento onClcik. 👀 */}
 
                 <Link to={`/peliculas/id/${this.props.datosPelicula.id}`}>
                     <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
 
                 </Link>
+                <section className="main-nav">
                 <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
+                <p className='boton' onClick={() => this.favs(this.props.datosPelicula.id)}>{this.state.favsMessage}</p>
+
+                </section>
+                
                 {/* <p className='delete' onClick={() => this.props.borrar(this.props.datosPelicula.id)}>Borrar</p> */}
                 <section >
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Overview: {this.props.datosPelicula.overview}</p>
