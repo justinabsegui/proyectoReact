@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Buscador from '../Buscador/Buscador';
 import './Navbar.css';
+import VerTodas from '../VerTodas/VerTodas';
 
 
 class Navbar extends Component {
@@ -19,18 +20,14 @@ class Navbar extends Component {
                     <li>
                         <Link to='/'> Home </Link>
                     </li>
-                    <li>
-                        <Link to='/aboutus'> About us </Link>
-                    </li>
                     <li><Link to='/PopularMovies' className='links'> Popular Movies</Link> </li>
                     
                     <li> <Link to='/topratedmovies' className='links'> Top Rated Movies </Link> </li>
                    
                     <li> <Link to='/favoritos' className='links'> Favoritos </Link> </li>
+
+                    <li><Link to="/Vertodas" className='links'>VerTodas</Link></li>
                     <Buscador/>
-                    <ul className="user">
-                        <li>Nombre usuario <img src="/img/user.jpg" alt="" /></li>
-                    </ul>
                 </ul>
                 <div className='banner'>
                     <img src="/images/banner.jpeg" alt="Banner" />

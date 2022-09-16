@@ -9,6 +9,7 @@ import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
 
 
+
 // import NotFound from "./Component/Notfound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas

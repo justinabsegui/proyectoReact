@@ -9,8 +9,6 @@ function Home(){
         <div>
             <TopRatedMovies />
             <PopularMovies />
-            
-
         </div>
     )
 }
