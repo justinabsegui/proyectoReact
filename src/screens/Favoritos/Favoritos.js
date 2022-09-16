@@ -5,26 +5,33 @@ class Favoritos extends Component {
     constructor() {
         super();
         this.state = {
-            movies: [] //Es array de objetos literales con cada movie
+            movies: [], //Es array de objetos literales con cada movie
+            favoritos: true,
         }
     }
 
     componentDidMount() {
-        let favoritos = [];
+
         let recuperoStorage = localStorage.getItem('favoritos')
+
         if (recuperoStorage !== null) {
-            favoritos = JSON.parse(recuperoStorage) //es un array de ids
+            let favmov = JSON.parse(recuperoStorage) //es un array de ids
             let movies = [];
 
             //recorrer el array y pedirla al endpoint por los datos de cada personaje.
-            favoritos.forEach(unIdFavorito => {
+            favmov.forEach(unIdFavorito => {
                 //pedir por cada id los datos del personaje
-                let url = `https://api.themoviedb.org/3/find/${unIdFavorito}`//buscar el link de la api
-                // no le pego al link de la api que hay que usar https://api.themoviedb.org/3/search/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true
-                // let url = `/peliculas/id/${this.props.datosPelicula}`
-                fetch(url)
+                fetch(`https://api.themoviedb.org/3/search/movie/${unIdFavorito}api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true`)
                     .then(res => res.json())
-                    .then(data => movies.push(data))
+                    .then(data => movies.push(data),
+                        this.setState(
+                            {
+                                movies: movies,
+                            }
+                        )
+
+                    )
+
                     .catch(e => console.log(e))
             })
 
