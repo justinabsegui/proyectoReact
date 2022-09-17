@@ -38,7 +38,6 @@ class PopularMovies extends Component {
     render(){
         return(
             <React.Fragment> 
-                 <button onClick={()=>this.traerMas()}> Traer más </button>
                 <div>
                     <h2 className="TituloC">Popular Movies</h2>
                 </div>
