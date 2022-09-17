@@ -42,6 +42,8 @@ class Favoritos extends Component {
         }
     }
     
+
+    
     render() {
         return (
             <React.Fragment>

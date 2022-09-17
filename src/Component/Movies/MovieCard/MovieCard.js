@@ -76,7 +76,7 @@ class MovieCard extends Component {
     }
 
     render() {
-        // console.log(this.props);
+
         return (
             <article className='movie-card'>
 
