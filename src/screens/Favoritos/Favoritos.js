@@ -12,36 +12,40 @@ class Favoritos extends Component {
     }
 
     componentDidMount() {
-        let favmov = []
-        let recuperoStorage = localStorage.getItem('favmov')
 
-        if (recuperoStorage !== null) {
-            favmov = JSON.parse(recuperoStorage) //es un array de ids
-            let favs = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+
+        if(recuperoStorage !== null){
+            let movieFav = JSON.parse(recuperoStorage) //es un array de ids
+            let pelis = [];
 
             //recorrer el array y pedirla al endpoint por los datos de cada personaje.
-            favmov.forEach((id) => {
-                //pedir por cada id los datos del personaje
-                fetch(`https://api.themoviedb.org/3/search/movie/${id}api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true`)
-                    .then(res => res.json())
-                    .then(unaMovie => favs.push(unaMovie))
-                    .then(() => this.setState(
-                            {
-                                movies: favs,
-                            }
-                        ))
+            movieFav.forEach((id) => {
+                //pedir por cada id los datos de la movie
+                fetch(`https://api.themoviedb.org/3/movie/${id}api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true`)
+                .then(res => res.json())
+                .then(data => {
+                    pelis.push(data)
 
-                        .catch(e => console.log('El error es' + e))
-                    })
-            }
+                    this.setState(
+                        {
+                            movies: pelis,
+                        }
+                    )
+
+                })
+                .catch(e => console.log(e))
+        });
+        console.log(pelis)
     }
+}
         render() {
             return (
                 <React.Fragment>
                     <h2>My favourites movies</h2>
                     <section className='card-container'>
                         {
-                            this.state.movies.map((unaMovie, idx) => <MovieCard key={unaMovie.title + idx} datosMovie={unaMovie} />)
+                            this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} datosMovie={dataMovie} />)
                         }
                     </section>
                 </React.Fragment>

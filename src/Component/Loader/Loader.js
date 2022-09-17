@@ -16,7 +16,7 @@ class Loader extends Component {
             .then(json_obj => {
                 let url = json_obj.data.images.original.url; //h que sea original
                 this.setState({
-                    // gif_url: url
+                    gif_url: url
                 })
             })
             .catch(error => console.log('el error es' + error))
