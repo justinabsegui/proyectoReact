@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import Home from "./screens/Home/Home";
-import Loader from "./Component/Loader/Loader";
+/* import Loader from "./Component/Loader/Loader"; */
 /* import Favoritos from "./Component/Favoritos/Favoritos"; */
 import DetalleMovie from "./screens/DetalleMovie/DetalleMovie";
 import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
