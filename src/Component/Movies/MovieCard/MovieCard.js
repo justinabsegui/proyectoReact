@@ -45,7 +45,7 @@ class MovieCard extends Component {
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
                 favsMessage: 'Add to favourites'
-            })
+            }) 
         } else {
             favoritos.push(id);
             //mostar un texto diferente al usuario. Quitar de favs

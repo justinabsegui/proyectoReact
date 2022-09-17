@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
-import './favoritos.css';
+import './favoritos.css'
+import PopularMovies from '../../Component/Movies/PopularMovies/PopularMovies';
+import TopRatedMovies from '../../Component/Movies/TopRatedMovies/TopRatedMovies';
 
 class Favoritos extends Component {
     constructor() {
@@ -22,7 +24,7 @@ class Favoritos extends Component {
             //recorrer el array y pedirla al endpoint por los datos de cada personaje.
             movieFav.forEach((id) => {
                 //pedir por cada id los datos de la movie
-                fetch(`https://api.themoviedb.org/3/movie/${id}api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true`)
+                fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=1&include_adult=true`)
                     .then(res => res.json())
                     .then(data => {
                         pelis.push(data)
@@ -34,7 +36,7 @@ class Favoritos extends Component {
                         )
 
                     })
-                    .catch(e => console.log(e))
+                .catch(error => console.log('el error fue '+ error ))
             });
             console.log(pelis)
         }
@@ -75,7 +77,7 @@ class Favoritos extends Component {
                 <h2>My favourites movies</h2>
                 <section className='card-container'>
                     {
-                        this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} datosMovie={datosPelicula} />)
+                        this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} overview={dataMovie.overview}  release_date={dataMovie.release_date} vote_average={dataMovie.vote_average}  image={dataMovie.poster_path} title={dataMovie.title} id={dataMovie.id} />)
                         // this.state.movies.map((unaMovie, idx) => <MovieCard key={unaMovie.name + idx} datosMovie={unaMovie} />)
                     }
                 </section>
