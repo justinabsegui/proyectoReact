@@ -9,6 +9,7 @@ class VerTodas extends Component {
         this.state = {
             dataMovie: [],
             nextUrl: 1,
+            backup: [],
         }
     }
 
@@ -35,8 +36,10 @@ class VerTodas extends Component {
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.nextUrl}`)
             .then(res => res.json())
             .then(data => this.setState({
-                dataMovie: data.results.concat(this.state.dataMovie),
-                nextUrl: data.page + 1
+                dataMovie: data.results,
+                nextUrl: data.page + 1,
+                backup: data.results.concat(this.state.backup)
+                
             }))
             .catch(error => console.log('el error fue ' + error))
     }

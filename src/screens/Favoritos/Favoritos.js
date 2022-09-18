@@ -6,7 +6,7 @@ class Favoritos extends Component {
     constructor() {
         super();
         this.state = {
-            movies: [], //Es array de objetos literales con cada movie
+            movies: [], 
             favoritos: true,
         }
     }
@@ -39,21 +39,27 @@ class Favoritos extends Component {
             console.log(pelis)
         }
     }
+    borrar(id){
+        const moviesFiltradas = this.state.movies.filter((datos) => datos.id !== id);
+        this.setState({
+         movies: moviesFiltradas
 
-    
-    render() {
-        return (
-            <React.Fragment>
-                <h2>My favourites movies</h2>
-                <section className='card-container'>
-                    {
-                        this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} overview={dataMovie.overview}  release_date={dataMovie.release_date} vote_average={dataMovie.vote_average}  image={dataMovie.poster_path} title={dataMovie.title} id={dataMovie.id} />)
-                        
-                    }
-                </section>
-            </React.Fragment>
-        )
-    }
-
-}
-export default Favoritos;
+        })
+      }
+ 
+     render() {
+         return (
+             <React.Fragment>
+                 <h2>My favourites movies</h2>
+                 <section className='card-container'>
+                     {
+                         this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} overview={dataMovie.overview}  release_date={dataMovie.release_date} vote_average={dataMovie.vote_average}  image={dataMovie.poster_path} title={dataMovie.title} id={dataMovie.id} borrar={(id)=>this.borrar(id)}/>)
+                         
+                     }
+                 </section>
+             </React.Fragment>
+         )
+     }
+ 
+ }
+ export default Favoritos;

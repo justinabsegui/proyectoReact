@@ -42,6 +42,7 @@ class MovieCard extends Component {
         //Preguntemos si el id ya está en el array.
         if (favoritos.includes(id)) { //includes retorna un booleano.
             favoritos = favoritos.filter(unId => unId !== id);
+            this.props.borrar(id);
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
                 favsMessage: 'Add to favourites'
@@ -87,7 +88,7 @@ class MovieCard extends Component {
                 <Link to={`/movie/id/${this.props.id}`}>
                     <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
 
-                </Link>
+                </Link> 
                 <section className="main-nav">
                 <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
                 <p className='boton' onClick={() => this.favs(this.props.id)}>{this.state.favsMessage}</p>
