@@ -1,0 +1,9 @@
+.boton {
+    background-color: blue;
+    align-self: center;
+    margin: 12px;
+    padding: 9px;
+    border: 0px white solid;
+    border-radius: 50px;
+    width: 100px;
+}

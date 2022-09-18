@@ -26,7 +26,7 @@ class Navbar extends Component {
                    
                     <li> <Link to='/favoritos' className='links'> Favoritos </Link> </li>
 
-                    <li><Link to="/Vertodas" className='links'>VerTodas</Link></li>
+                    <li><Link to="/Vertodas" className='links'> All movies</Link></li>
                     <Buscador/>
                 </ul>
                 <div className='banner'>

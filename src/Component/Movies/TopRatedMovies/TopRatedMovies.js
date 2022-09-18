@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import Loader from "../../Loader/Loader";
+import './TopRatedMovies.css';
 
 
 class TopRatedMovies extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [],
+            nextUrl: 1,
         }
     }
 
@@ -15,16 +17,26 @@ class TopRatedMovies extends Component {
         fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c")
             .then(response => response.json())
             .then(data => this.setState(
-                { data: data.results }
+                {
+                    data: data.results,
+                    nextUrl: data.page + 1,
+                    backup: data.results,
+                }
             ))
             .catch(error => console.log('el error fue ' + error))
     }
-    // borrar(id){
-    //     let personajesFiltrados = this.state.personajes.filter(unPersonaje => unPersonaje.id !== id);
-    //     this.setState({
-    //      personajes: personajesFiltrados
-    //     })
-    //  }
+
+    traerMasMovies() {
+        //Traer la siguiente página de personajes
+
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.nextUrl}`)
+            .then(res => res.json())
+            .then(data => this.setState({
+                data: data.results.concat(this.state.data),
+                nextUrl: data.page + 1
+            }))
+            .catch(error => console.log('el error fue ' + error))
+    }
 
     render() {
         return (
@@ -36,9 +48,10 @@ class TopRatedMovies extends Component {
                         <>
                             <div>
                                 <h2 className="TituloC">Top Rated Movies</h2>
+                                <button className='boton' onClick={() => this.traerMasMovies()}> Traer más Movies </button>
                             </div>
                             <section className='card-container'>
-                                {this.state.data.map((unMovies, idx) => <MovieCard datosPelicula={unMovies} key={unMovies.title + idx} overview={unMovies.overview}  id={unMovies.id}  release_date={unMovies.release_date} vote_average={unMovies.vote_average}  image={unMovies.poster_path} title={unMovies.title} />)}
+                                {this.state.data.map((unMovies, idx) => <MovieCard datosPelicula={unMovies} key={unMovies.title + idx} overview={unMovies.overview} id={unMovies.id} release_date={unMovies.release_date} vote_average={unMovies.vote_average} image={unMovies.poster_path} title={unMovies.title} />)}
                             </section>
                         </>
                 }
