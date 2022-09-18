@@ -37,7 +37,6 @@ function App() {
 
          <Route path = '/VerTodas' component = {VerTodas} />
 
-          {/* <Route path='/movie/id/:id' component={DetalleMovies} /> */}
 
           {<Route path='' component={NotFound} />}
         </Switch>

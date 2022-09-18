@@ -38,7 +38,7 @@ class VerTodas extends Component {
                 dataMovie: data.results.concat(this.state.dataMovie),
                 nextUrl: data.page + 1
             }))
-            .catch()
+            .catch(error => console.log('el error fue ' + error))
     }
 
 
@@ -66,7 +66,7 @@ class VerTodas extends Component {
                     <button className='button-54' onClick={() => this.traerMasMovies()}> Traer más Movies </button>
                 </div>
                 <section className='card-container'>
-                    {this.state.dataMovie.map((Movie, idx) => <MovieCard key={Movie.title + idx} data={Movie} image={Movie.poster_path} title={Movie.title} descripcion={Movie.overview} />)}
+                    {this.state.dataMovie.map((Movie, idx) => <MovieCard key={Movie.title + idx} data={Movie} image={Movie.poster_path} title={Movie.title} overview={Movie.overview} id={Movie.id}  release_date={Movie.release_date} vote_average={Movie.vote_average}/>)}
                 </section>
 
             </React.Fragment>

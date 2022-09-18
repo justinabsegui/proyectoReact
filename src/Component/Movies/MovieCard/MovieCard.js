@@ -45,7 +45,8 @@ class MovieCard extends Component {
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
                 favsMessage: 'Add to favourites'
-            }) 
+
+            }, ) 
         } else {
             favoritos.push(id);
             //mostar un texto diferente al usuario. Quitar de favs
@@ -83,7 +84,7 @@ class MovieCard extends Component {
                 <h2 className='titul'>{this.props.title}</h2>
                
 
-                <Link to={`/peliculas/id/${this.props.id}`}>
+                <Link to={`/movie/id/${this.props.id}`}>
                     <img src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" />
 
                 </Link>
@@ -95,8 +96,8 @@ class MovieCard extends Component {
                 
                 {/* <p className='delete' onClick={() => this.props.borrar(this.props.datosPelicula.id)}>Borrar</p> */}
                 <section >
-                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Overview: {this.props.overview}</p>
-                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Rating: {this.props.vote_average}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.overview}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> IMDB Rating: {this.props.vote_average}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Release date: {this.props.release_date}</p>
                 </section>
             </article>
