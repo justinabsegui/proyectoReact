@@ -1,0 +1,13 @@
+.adentro {
+    color: black;
+}
+
+.boton {
+      background-color: blue;
+      align-self: center;
+      margin: 1px;
+      margin-top: 12px;
+      padding: 9px;
+      border: 0px white solid;
+      border-radius: 50px;
+}

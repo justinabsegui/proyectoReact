@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './filtro.css'
 
 class Filtro extends Component {
     constructor(props){
@@ -21,7 +22,7 @@ class Filtro extends Component {
   render() {
     return (
       <form onSubmit={(e) => this.evitarRefresh(e)}>
-        <input type={'text'} onChange={(e)=> this.guardarCambios(e)} value={this.state.valor} placeholder ='Buscador' />
+        <input className='adentro' type={'text'} onChange={(e)=> this.guardarCambios(e)} value={this.state.valor} placeholder ='Buscador' />
       </form>
     )
   }

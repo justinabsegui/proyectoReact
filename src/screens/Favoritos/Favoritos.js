@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
-import './Favoritos.css'
-import PopularMovies from '../../Component/Movies/PopularMovies/PopularMovies';
-import TopRatedMovies from '../../Component/Movies/TopRatedMovies/TopRatedMovies';
+import './favoritos.css'
 
 class Favoritos extends Component {
     constructor() {
@@ -41,7 +39,6 @@ class Favoritos extends Component {
             console.log(pelis)
         }
     }
-    
 
     
     render() {
