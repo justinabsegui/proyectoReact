@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
-import './favoritos.css'
+import './Favoritos.css'
 import PopularMovies from '../../Component/Movies/PopularMovies/PopularMovies';
 import TopRatedMovies from '../../Component/Movies/TopRatedMovies/TopRatedMovies';
 
