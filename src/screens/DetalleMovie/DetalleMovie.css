@@ -1,0 +1,30 @@
+.detalle-peli{
+    display: flex;
+    border: 3px solid #fff;
+    padding: 20px;
+    justify-content: space-between;
+    justify-self: center;
+}
+
+.detalle-peli-izq{
+    width: 20%;
+   flex: 1;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.detalle-peli-der{
+    width: 50%;
+    flex: 2;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.img-detalle-peli{
+    width: 100%;
+    height: 90%;
+}
+
+.info-detalle-peli{
+    font-size: 125%;
+}

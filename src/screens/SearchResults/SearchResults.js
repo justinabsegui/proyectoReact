@@ -24,7 +24,7 @@ class SearchResults extends Component {
             <React.Fragment>
                  <h2> Títulos relacionados con "{this.props.match.params.title}"</h2>
                  <section className='card-container'>
-                    {this.state.resultado.map((peliresult, idx)=> <MovieCard key={peliresult.title + idx} id={peliresult.id} datosPelicula={peliresult}  image={peliresult.poster_path} title={peliresult.title}/>)}
+                    {this.state.resultado.map((peliresult, idx)=> <MovieCard key={peliresult.title + idx} id={peliresult.id} overview={peliresult.overview} release_date={peliresult.release_date} vote_average={peliresult.vote_average} image={peliresult.poster_path} title={peliresult.title}/>)}
             </section>
             </React.Fragment>
         )

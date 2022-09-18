@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Buscador from '../Buscador/Buscador';
 import './Navbar.css';
-import VerTodas from '../VerTodas/VerTodas';
-
 
 class Navbar extends Component {
     constructor() {
@@ -24,7 +22,7 @@ class Navbar extends Component {
                     
                     <li> <Link to='/topratedmovies' className='links'> Top Rated Movies </Link> </li>
                    
-                    <li> <Link to='/favoritos' className='links'> Favourites </Link> </li>
+                    <li> <Link to='/favoritos' className='links'> Favorites </Link> </li>
 
                     <li><Link to="/Vertodas" className='links'> All movies</Link></li>
                     <Buscador/>
