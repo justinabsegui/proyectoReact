@@ -1,12 +1,10 @@
 .movie-card{
     align-items: center;
     padding: 10px;
-    margin-bottom: 20px;
     width: 23%;
-    /* background: rgb(228, 223, 223); */
     border-radius: 20px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
-    margin: 5px;
+    margin: 10px;
 }
 .card-container{
     align-items: center;
