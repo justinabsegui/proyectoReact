@@ -37,8 +37,9 @@ class Favoritos extends Component {
                 .catch(error => console.log('el error fue '+ error ))
             });
             console.log(pelis)
-        }
+        } 
     }
+
     borrar(id){
         const moviesFiltradas = this.state.movies.filter((datos) => datos.id !== id);
         this.setState({
@@ -50,7 +51,7 @@ class Favoritos extends Component {
      render() {
          return (
              <React.Fragment>
-                 <h2>My favourites movies</h2>
+                 <h2>My favorite movies</h2>
                  <section className='card-container'>
                      {
                          this.state.movies.map((dataMovie, idx) => <MovieCard key={dataMovie + idx} overview={dataMovie.overview}  release_date={dataMovie.release_date} vote_average={dataMovie.vote_average}  image={dataMovie.poster_path} title={dataMovie.title} id={dataMovie.id} borrar={(id)=>this.borrar(id)}/>)

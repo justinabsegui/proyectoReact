@@ -7,8 +7,8 @@ class DetalleMovie extends Component {
         super(props);
         this.state = {
             infoPeli: [],
-            id: props.match.params.id,
-            favsMessage: 'Add to favourites',
+            id: Number(props.match.params.id),
+            favsMessage: 'Add to favorites',
         }
     }
 
@@ -23,7 +23,7 @@ class DetalleMovie extends Component {
 
         if (favoritos.includes(this.state.id)) {
             this.setState({
-                favsMessage: 'Remove from favourites'
+                favsMessage: 'Remove from favorites'
             },()=>  console.log(favoritos) )
         }
 
@@ -54,7 +54,7 @@ class DetalleMovie extends Component {
             favoritos = favoritos.filter(unId => unId !== id);
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
-                favsMessage: 'Add to favourites'
+                favsMessage: 'Add to favorites'
 
             }, ) 
         } else {
@@ -62,7 +62,7 @@ class DetalleMovie extends Component {
             favoritos.push(id);
             //mostar un texto diferente al usuario. Quitar de favs
             this.setState({
-                favsMessage: 'Remove from favourites'
+                favsMessage: 'Remove from favorites'
             })
         }
 
@@ -76,14 +76,14 @@ class DetalleMovie extends Component {
         return (
             <section className='detalle-peli'>
                 <div className='detalle-peli-izq'>
-                    <h2 className='titulo-detalle-pelo'>{this.state.infoPeli.title}</h2>
-
                     <img src={`https://image.tmdb.org/t/p/w342/${this.state.infoPeli.poster_path}`} className='img-detalle-peli' alt="" />
                 </div>
                 <div className='detalle-peli-der'>
-                    <p className='info-detalle-peli'> {this.state.infoPeli.overview}</p>
+                    <h2 className='titulo-detalle-peli'>{this.state.infoPeli.title}</h2>
+                    <p className='descripcion-detalle-peli'> {this.state.infoPeli.overview}</p>
                     <p className='info-detalle-peli'> IMDB Rating: {this.state.infoPeli.vote_average}</p>
                     <p className='info-detalle-peli'> Release date: {this.state.infoPeli.release_date}</p>
+                    <p className='info-detalle-peli'> Duration: {this.state.infoPeli.runtime} minutes</p>
                     <p className='boton' onClick={() => this.favs(this.state.id)}>{this.state.favsMessage}</p>
                 </div>
             </section>

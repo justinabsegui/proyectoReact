@@ -6,7 +6,7 @@ class MovieCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            favsMessage: 'Add to favourites',
+            favsMessage: 'Add to favorites',
             viewMore: false,
             text: 'Show more',
         }
@@ -22,7 +22,7 @@ class MovieCard extends Component {
 
         if (favoritos.includes(this.props.id)) {
             this.setState({
-                favsMessage: 'Remove from favourites'
+                favsMessage: 'Remove from favorites'
             })
         }
 
@@ -42,17 +42,19 @@ class MovieCard extends Component {
         //Preguntemos si el id ya está en el array.
         if (favoritos.includes(id)) { //includes retorna un booleano.
             favoritos = favoritos.filter(unId => unId !== id);
-            this.props.borrar(id);
+            if (this.props.borrar) {
+                this.props.borrar(id);
+            }
             //mostar al usuario un nuevo texto: agregar a favoritos
             this.setState({
-                favsMessage: 'Add to favourites'
+                favsMessage: 'Add to favorites'
 
-            }, ) 
+            }) 
         } else {
             favoritos.push(id);
             //mostar un texto diferente al usuario. Quitar de favs
             this.setState({
-                favsMessage: 'Remove from favourites'
+                favsMessage: 'Remove from favorites'
             })
         }
 
@@ -90,7 +92,6 @@ class MovieCard extends Component {
 
                 </Link> 
                 <section className="main-nav">
-                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
                 <p className='boton' onClick={() => this.favs(this.props.id)}>{this.state.favsMessage}</p>
 
                 </section>
@@ -100,6 +101,7 @@ class MovieCard extends Component {
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> {this.props.overview}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> IMDB Rating: {this.props.vote_average}</p>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}> Release date: {this.props.release_date}</p>
+                    <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
                 </section>
             </article>
 
