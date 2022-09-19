@@ -28,10 +28,10 @@ class TopRatedMovies extends Component {
             .catch(error => console.log('el error fue ' + error))
     }
 
-    traerMasMovies() {
+    paginaSiguiente() {
         //Traer la siguiente página de personajes
 
-        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.nextUrl}`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.nextUrl}`)
             .then(res => res.json())
             .then(data => this.setState({
                 data: data.results,
@@ -40,6 +40,20 @@ class TopRatedMovies extends Component {
             }))
             .catch(error => console.log('el error fue ' + error))
     }
+
+    paginaAnterior() {
+        //Traer la siguiente página de personajes
+        if (this.state.nextUrl > 2){
+            let previousUrl = (this.state.nextUrl - 2);
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${previousUrl}`)
+            .then(res => res.json())
+            .then(data => this.setState({
+                data: data.results,
+                nextUrl: data.page + 1,
+                backup: data.results.concat(this.state.backup)
+            }))
+            .catch(error => console.log('el error fue ' + error))
+    }}
 
     filtrarMovie(nombre) {
         let arrayFiltrado =
@@ -62,11 +76,12 @@ class TopRatedMovies extends Component {
                                 <h2 className="TituloC">Top Rated Movies</h2>
                                 <h3 className="letrablanca">Filter movies by title: </h3>
                                 <Filtro filtro={(nombre) => this.filtrarMovie(nombre)} />
-                                <button className='boton2' onClick={() => this.traerMasMovies()}> Traer más Movies </button>
                             </div>
                             <section className='card-container'>
                                 {this.state.data.slice(0,8).map((unMovies, idx) => <MovieCard datosPelicula={unMovies} key={unMovies.title + idx} overview={unMovies.overview} id={unMovies.id} release_date={unMovies.release_date} vote_average={unMovies.vote_average} image={unMovies.poster_path} title={unMovies.title} />)}
                             </section>
+                            <button className='boton2' onClick={() => this.paginaAnterior()}> Previous page </button>
+                            <button className='boton2' onClick={() => this.paginaSiguiente()}> Next page </button>
                         </>
                 }
             </React.Fragment>
