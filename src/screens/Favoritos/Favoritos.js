@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from '../../Component/Movies/MovieCard/MovieCard';
-import './favoritos.css'
+import './Favoritos.css'
 
 class Favoritos extends Component {
     constructor() {
