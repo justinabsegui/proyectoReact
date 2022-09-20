@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import Loader from "../../Loader/Loader";
+import { Link } from 'react-router-dom';
 import './TopRatedMovies.css';
 
 
@@ -63,7 +64,7 @@ class TopRatedMovies extends Component {
                         :
                         <>
                             <div>
-                                <h2 className="TituloC">Top Rated Movies</h2>
+                            <h2><Link to='/TopRatedMovies' className='TituloC'> Top Rated Movies</Link></h2>
                             </div>
                             <section className='card-container'>
                                 {this.state.data.slice(0, 4).map((unMovies, idx) => <MovieCard datosPelicula={unMovies} key={unMovies.title + idx} overview={unMovies.overview} id={unMovies.id} release_date={unMovies.release_date} vote_average={unMovies.vote_average} image={unMovies.poster_path} title={unMovies.title} />)}
