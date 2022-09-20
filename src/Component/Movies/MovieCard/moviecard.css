@@ -11,7 +11,7 @@
 }
 .card-container{
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 
@@ -54,6 +54,7 @@ box-shadow: 0rem 0rem 10px 8px rgb(255, 255, 255);
     display: block;
 }
 .titul{
+    height: 20%;
     color:white;
     text-align: center;
     font-size: 150%;

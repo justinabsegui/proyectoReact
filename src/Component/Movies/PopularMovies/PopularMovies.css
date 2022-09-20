@@ -7,3 +7,13 @@
     border-radius: 50px;
     width: 100px;
 }
+
+.contenedor-botones-paginas{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.letrablanca{
+    padding-right: 2%;
+}

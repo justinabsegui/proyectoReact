@@ -5,13 +5,13 @@ import Home from "./screens/Home/Home";
 // import Loader from "./Component/Loader/Loader";
 import Favoritos from "./screens/Favoritos/Favoritos";
 import DetalleMovie from "./screens/DetalleMovie/DetalleMovie";
-import PopularMovies from "./Component/Movies/PopularMovies/PopularMovies";
+import VerTodoPopularMovies from "./Component/Movies/VerTodoPopularMovies/VerTodoPopularMovies";
 import NotFound from "./screens/NotFound/NotFound";
 
 import { Route, Switch } from 'react-router-dom'; //componente que me deja escribir rutas
 import SearchResults from "./screens/SearchResults/SearchResults";
-import TopRatedMovies from "./Component/Movies/TopRatedMovies/TopRatedMovies";
-import VerTodas from "./Component/VerTodas/VerTodas";
+import VerTodoTopRatedMovies from "./Component/Movies/VerTodoTopRatedMovies/VerTodoTopRatedMovies";
+
 function App() {
   return (
     <React.Fragment>
@@ -21,20 +21,18 @@ function App() {
         <Switch>
           <Route path='/' exact={true} component={Home} />
           
-          <Route path='/Favoritos' component={Favoritos} />
+          <Route path='/Favoritos' exact={true} component={Favoritos} />
 
-          <Route path='/TopRatedMovies' component={TopRatedMovies} />
+          <Route path='/TopRatedMovies' exact={true} component={VerTodoTopRatedMovies} />
 
-          <Route path='/PopularMovies' component={PopularMovies} />
+          <Route path='/PopularMovies' exact={true} component={VerTodoPopularMovies} />
 
           <Route path='/search-results/:title' component={SearchResults} />
 
           <Route path='/movie/id/:id' component={DetalleMovie} />
 
-         <Route path = '/VerTodas' component = {VerTodas} />
-
-
           {<Route path='' component={NotFound} />}
+
         </Switch>
         <Footer />
       </main>
