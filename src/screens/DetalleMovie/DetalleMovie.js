@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './DetalleMovie.css'
+import './detalleMovie.css'
 
 
 class DetalleMovie extends Component {
